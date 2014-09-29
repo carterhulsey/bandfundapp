@@ -1,3 +1,3 @@
 class Pledge < ActiveRecord::Base
-  belongs_to :artist
+  has_and_belongs_to_many :artists, :through => :artists_pledges 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140929191945) do
+ActiveRecord::Schema.define(version: 20140929211414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,12 @@ ActiveRecord::Schema.define(version: 20140929191945) do
   add_index "artists", ["email"], name: "index_artists_on_email", unique: true, using: :btree
   add_index "artists", ["reset_password_token"], name: "index_artists_on_reset_password_token", unique: true, using: :btree
 
+  create_table "artists_pledges", force: true do |t|
+    t.integer "artist_id"
+    t.integer "pledge_id"
+    t.integer "price"
+  end
+
   create_table "fans", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -56,6 +62,7 @@ ActiveRecord::Schema.define(version: 20140929191945) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pledge_id"
   end
 
   add_index "fans", ["email"], name: "index_fans_on_email", unique: true, using: :btree
@@ -63,6 +70,13 @@ ActiveRecord::Schema.define(version: 20140929191945) do
 
   create_table "genres", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pledges", force: true do |t|
+    t.integer  "artist_id"
+    t.integer  "fan_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
