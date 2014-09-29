@@ -3,7 +3,7 @@ class Artist < ActiveRecord::Base
   belongs_to :genre
   has_many :rewards
 
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   validates :city, :state, :website_url, :name, presence: true
 
