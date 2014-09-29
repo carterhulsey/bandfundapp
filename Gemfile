@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem "better_errors", group: :development
 gem "binding_of_caller"
+gem 'social-share-button'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.3'
