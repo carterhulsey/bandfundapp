@@ -16,6 +16,12 @@ ActiveRecord::Schema.define(version: 20140929213204) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "artist_pledges", force: true do |t|
+    t.integer "artist_id"
+    t.integer "pledge_id"
+    t.integer "price"
+  end
+
   create_table "artists", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -43,12 +49,6 @@ ActiveRecord::Schema.define(version: 20140929213204) do
 
   add_index "artists", ["email"], name: "index_artists_on_email", unique: true, using: :btree
   add_index "artists", ["reset_password_token"], name: "index_artists_on_reset_password_token", unique: true, using: :btree
-
-  create_table "artists_pledges", force: true do |t|
-    t.integer "artist_id"
-    t.integer "pledge_id"
-    t.integer "price"
-  end
 
   create_table "fans", force: true do |t|
     t.string   "email",                  default: "", null: false
