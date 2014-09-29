@@ -1,7 +1,8 @@
 class Artist < ActiveRecord::Base
   belongs_to :genre
   has_many :rewards
-  has_many :pledges, :through => :artists_pledges 
+  has_many :artists_pledges
+  has_many :pledges, :through => :artist_pledges 
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
