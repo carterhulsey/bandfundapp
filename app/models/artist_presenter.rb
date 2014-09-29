@@ -14,4 +14,8 @@ class ArtistPresenter < SimpleDelegator
   def current_monthly_contributions
     1450
   end
+
+  def number_of_supporters
+    self.pledges.count 
+  end
 end
