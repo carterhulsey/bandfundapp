@@ -2,16 +2,19 @@
   .container
     .row
       .small-8.columns
-        = form_for @pledge, url: reward_pledges_path(params[:reward_id]) do |form|
-          %p
-            = form.label :credit_card
-            = form.text_field :credit_card
-          %p
-            = form.label :price, "Price in Dollars"
-            = form.text_field :price
-            = form.hidden_field :artist_id, :value => @reward.artist_id
-            = form.hidden_field :fan_id, :value => current_fan
-          = submit_tag
+        = if current_fan
+          = form_for @pledge, url: reward_pledges_path(params[:reward_id]) do |form|
+            %p
+              = form.label :credit_card
+              = form.text_field :credit_card
+            %p
+              = form.label :price, "Price in Dollars"
+              = form.text_field :price
+              = form.hidden_field :artist_id, :value => @reward.artist_id
+              = form.hidden_field :fan_id, :value => current_fan.id
+            = submit_tag
+          = if !current_fan 
+            %5 Please login or signup to make a pledge!
       .small-4.columns
         .stats
           .stat
