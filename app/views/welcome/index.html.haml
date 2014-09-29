@@ -1,0 +1,140 @@
+%section#cta
+  #fan
+    = image_tag "ipod-white.svg"
+    .signup-cta
+      %h2 I am a Fan
+      %a.button.button-clear-white{:href => "#"} Sign Up
+  #artist
+    = image_tag "ipod-grey.svg"
+    .signup-cta
+      %h2 I am an Artist
+      %a.button.button-clear{:href => new_artist_registration_path} Sign Up
+%section#about
+  .container
+    .about-info
+      %h3 What is Bandfund?
+      %p Bandfund is a recurring crowdfunding platform for musicians and their fans.
+      %a.button.button-clear-green{:href => "about.html"} Learn More
+%section#featured
+  .container
+    %h2 Featured Artist
+    .hr-with-margin
+    %a.featured-image{:href => "profile.html"}
+      %img.main-image{:alt => "", :src => image_path("carter.png")}/
+      %img.featured-badge{:alt => "", :src => image_path("featured-badge.svg")}/
+    %h3 Carter Hulsey
+    %h4 Singer/Songwriter
+    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu turpis vulputate elementum eget ut tellus. Proin id ante congue.
+    %a.button.button-green{:href => "profile.html"} Pledge
+    .stats
+      .stat
+        %h5 71
+        %h6 Fans
+      .stat
+        %h5 114
+        %h6 Followers
+      .stat
+        %h5 $1,450
+        %h6 Permo
+%section#discover
+  %h2 Discover
+  .container
+    #myCarousel.carousel.slide
+      .carousel-inner
+        .item.active
+          %ul.thumbnails
+            %li.card
+              .thumbnail
+                %a{:href => "profile.html"}
+                  %img{:alt => "", :src => image_path("carter.png")}/
+              .caption
+                %h3 Carter Hulsey
+                %h4 Singer/Songwriter
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
+                %a.button.button-green{:href => "profile.html"} Pledge
+            %li.card
+              .thumbnail
+                %a{:href => "profile.html"}
+                  %img{:alt => "", :src => image_path("carter.png")}/
+              .caption
+                %h3 Carter Hulsey
+                %h4 Singer/Songwriter
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
+                %a.button.button-green{:href => "profile.html"} Pledge
+            %li.card
+              .thumbnail
+                %a{:href => "profile.html"}
+                  %img{:alt => "", :src => image_path("carter.png")}/
+              .caption
+                %h3 Carter Hulsey
+                %h4 Singer/Songwriter
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
+                %a.button.button-green{:href => "profile.html"} Pledge
+        / /Page1
+        .item
+          %ul.thumbnails
+            %li.card
+              .thumbnail
+                %a{:href => "profile.html"}
+                  %img{:alt => "", :src => image_path("carter.png")}/
+              .caption
+                %h3 Carter Hulsey
+                %h4 Singer/Songwriter
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
+                %a.button.button-green{:href => "profile.html"} Pledge
+            %li.card
+              .thumbnail
+                %a{:href => "profile.html"}
+                  %img{:alt => "", :src => image_path("carter.png")}/
+              .caption
+                %h3 Carter Hulsey
+                %h4 Singer/Songwriter
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
+                %a.button.button-green{:href => "profile.html"} Pledge
+            %li.card
+              .thumbnail
+                %a{:href => "profile.html"}
+                  %img{:alt => "", :src => image_path("carter.png")}/
+              .caption
+                %h3 Carter Hulsey
+                %h4 Singer/Songwriter
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
+                %a.button.button-green{:href => "profile.html"} Pledge
+        / /Page2
+        .item
+          %ul.thumbnails
+            %li.card
+              .thumbnail
+                %a{:href => "profile.html"}
+                  %img{:alt => "", :src => "img/carter.png"}/
+              .caption
+                %h3 Carter Hulsey
+                %h4 Singer/Songwriter
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
+                %a.button.button-green{:href => "profile.html"} Pledge
+            %li.card
+              .thumbnail
+                %a{:href => "profile.html"}
+                  %img{:alt => "", :src => "img/carter.png"}/
+              .caption
+                %h3 Carter Hulsey
+                %h4 Singer/Songwriter
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
+                %a.button.button-green{:href => "profile.html"} Pledge
+            %li.card
+              .thumbnail
+                %a{:href => "profile.html"}
+                  %img{:alt => "", :src => "img/carter.png"}/
+              .caption
+                %h3 Carter Hulsey
+                %h4 Singer/Songwriter
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
+                %a.button.button-green{:href => "profile.html"} Pledge
+        / /Page3
+      .control-box
+        %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"}
+          %img{:alt => "", :src => image_path("left-controller.png")}/
+        %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"}
+          %img{:alt => "", :src => image_path("right-controller.png")}/
+      / /.control-box
+    / /#myCarousel

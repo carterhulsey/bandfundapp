@@ -1,0 +1,863 @@
+/* General */
+
+html {
+    min-width: 960px;
+}
+
+body {
+    font-family: 'Brandon Grotesque';
+    min-width: 960px;
+    padding-top: 40px;
+    color: #333;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.hr-with-margin {
+    width: 100%;
+    height: 1px;
+    background-color: #efefef;
+    margin: 30px 0;
+}
+
+.hr {
+    width: 100%;
+    height: 1px;
+    background-color: #efefef;
+}
+
+.vertical-divider {
+    height: 100%;
+    width: 1px;
+    background-color: #efefef;
+    float: left;
+    margin: 0 30px;
+}
+
+label {
+    display: block;
+}
+
+.pad-top {
+    margin-top: 60px;
+}
+
+.pad-bottom {
+    margin-bottom: 60px;
+}
+
+/* Buttons */
+
+a {
+    text-decoration: none;
+}
+
+a.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   -webkit-transition: all .1s ease-in-out;
+}
+
+a.button:hover {
+    transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   -webkit-transition: all .1s ease-in-out;
+}
+
+.button-green {
+    border: 2px solid #42AA7D;
+    background-color: #42AA7D;
+    color: #fff;
+}
+
+.button-green:hover {
+    border: 2px solid #63CE9B;
+    color: #fff;
+    background-color: #63CE9B;
+}
+
+.button-lightgreen {
+    border: 2px solid #63CE9B;
+    background-color: #63CE9B;
+    color: #fff;
+}
+
+.button-lightgreen:hover {
+    border: 2px solid #42AA7D;
+    color: #fff;
+    background-color: #42AA7D;
+}
+
+.button-clear {
+    border: 2px solid #999;
+    color: #999;
+}
+
+.button-clear:hover {
+    border: 2px solid #42AA7D;
+    color: #fff;
+    background-color: #42AA7D;
+}
+
+.button-clear-white {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.button-clear-white:hover {
+    border: 2px solid #fff;
+    color: #42AA7D;
+    background-color: #fff;
+}
+
+.button-clear-green {
+    border: 2px solid #42AA7D;
+    color: #42AA7D;
+}
+
+.button-clear-green:hover {
+    border: 2px solid #42AA7D;
+    color: #fff;
+    background-color: #42AA7D;
+}
+
+submit.button.button-green {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   -webkit-transition: all .1s ease-in-out;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    min-width: 960px;
+    background-color: #fff;
+    border-bottom: #efefef solid 1px;
+    height: 60px;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo svg {
+    margin-top: 20px;
+    float: left;
+}
+
+header a {
+    display: inline-block;
+    float: left;
+}
+
+header #search {
+    float: left;
+    height: 60px;
+    padding: 18px 0;
+}
+
+header #search input {
+    margin-left: 5px;
+    border: none;
+    font-weight: 100;
+}
+
+header nav {
+    right: 0;
+    position: absolute;
+}
+
+header nav a {
+    margin-top: 18px;
+    text-decoration: none;
+    margin-right: 30px;
+    color: #999;
+    font-weight: 100;
+    border-bottom: none;
+}
+
+header nav a:hover {
+    border-bottom: 1px solid #999;
+}
+
+header nav #login {
+    float: right;
+}
+
+header nav #login a {
+    color: #fff;
+    margin: 0;
+    padding: 18px 40px;
+    background-color: #42AA7D;
+    transition: background-color .1s ease-in-out;
+   -moz-transition: background-color .1s ease-in-out;
+   -webkit-transition: background-color .1s ease-in-out;
+}
+
+header nav #login a:hover {
+    color: #fff;
+    margin: 0;
+    padding: 18px 40px;
+    border: none;
+    background-color: #63CE9B;
+    transition: background-color .1s ease-in-out;
+   -moz-transition: background-color .1s ease-in-out;
+   -webkit-transition: background-color .1s ease-in-out;
+}
+
+/* CTA */
+
+section#cta {
+    height: 500px;
+    position: relative;
+    width: 100%;
+    background-image: url('../img/cta-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+section#cta h2 {
+    color: #999;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+section#cta #fan {
+    width: 50%;
+    float: left;
+    height: 500px;
+    position: relative;
+    background-color: #42AA7D;
+    overflow: hidden;
+    -webkit-transform: skew(13deg, 0);
+    left:0;
+}
+
+section#cta #fan img {
+    position: absolute;
+    left: 49.2%;
+    top: 130px;
+    -webkit-transform: skew(-13deg, 0);
+}
+
+section#cta #artist img {
+    position: absolute;
+    right: 49.2%;
+    top: 130px;
+}
+
+section#cta #fan h2 {
+    color: #fff;
+}
+
+section#cta #artist {
+    width: 50%;
+    float: left;
+    height: 500px;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    -webkit-transform: skew(13deg, 0);
+}
+
+section#cta .signup-cta {
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    position: absolute;
+    bottom: 100px;
+    -webkit-transform: skew(-13deg, 0);
+}
+
+/* About */
+
+section#about {
+    background-color: #efefef;
+    float: left;
+    width: 100%;
+    padding: 0 30px;
+}
+
+section#about .about-info {
+    padding: 140px 0;
+}
+
+section#about h3 {
+    color: #333;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+section#about p {
+    color: #333;
+    font-size: 18px;
+    line-height: 27px;
+    width: 40%;
+    margin: 40px 0;
+}
+
+/* Featured */
+
+section#featured {
+    float: left;
+    width: 100%;
+    padding: 60px 30px;
+}
+
+section#featured h2 {
+    text-transform: uppercase;
+    margin-bottom: -20px;
+}
+
+section#featured a.featured-image {
+    position: relative;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+section#featured a.featured-image img.main-image {
+    width: 300px;
+    float: left;
+}
+
+section#featured a.featured-image img.featured-badge {
+    position: absolute;
+    left: 0;
+    width: 110px;
+}
+
+section#featured h3 {
+    font-size: 40px;
+    margin: 4px 0 0 0;
+}
+
+section#featured h4 {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+    font-weight: 100;
+    color: #999;
+}
+
+section#featured a.button {
+    margin: 26px 0 0 0;
+    float: left;
+}
+
+section#featured .stats {
+    margin-left: 20px;
+    float: left;
+}
+
+section#featured .stat {
+    float: left;
+    display: block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-top: -10px;
+}
+
+section#featured .stat h5 {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+section#featured .stat h6 {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 49px;
+    margin-left: 5px;
+}
+
+/* Discover */
+
+section#discover {
+    float: left;
+    background-color: #efefef;
+    width: 100%;
+    padding: 40px 0;
+}
+
+section#discover h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+section#discover .item .center {
+    margin: 0 auto;
+    display: block;
+}
+
+section#discover .card {
+    width: 274px;
+    float: left;
+    list-style: none;
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 10px;
+    position: relative;
+    border-radius: 5px;
+}
+
+section#discover .card .thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-clip: padding-box;
+}
+
+section#discover .card h3 {
+    margin-top: 200px;
+    font-size: 30px;
+}
+
+section#discover .card h4 {
+    margin-top: -26px;
+    font-weight: 300;
+    color: #999;
+}
+
+section#discover .card p {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 40px;
+}
+
+section#discover .card a {
+    display: block;
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    padding: 80px 0;
+    float: left;
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+    border-top: 1px solid #efefef;
+}
+
+footer .links {
+    position: relative;
+    left: 80px;
+    float: left;
+}
+
+footer .list {
+    float: left;
+    margin-right: 20px;
+}
+
+footer .list h3 {
+    margin: 0;
+}
+
+footer .copyright {
+    float: left;
+    position: absolute;
+    right: 80px;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+footer ul li {
+    margin-left: 0;
+}
+
+footer .list h3 {
+    color: #666;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+footer ul li a {
+    color: #666;
+}
+
+footer ul li a:hover {
+    border-bottom: 1px solid #666;
+}
+
+footer .copyright a {
+    color: #666;
+}
+
+/***************************************/
+/**************** About ****************/
+/***************************************/
+
+/* Header */
+
+section#about-header {
+    height: 500px;
+    width: 100%;
+    background-image: url('../img/band.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    float: left;
+}
+
+section#about-header h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 250px;
+    color: #fff;
+}
+
+section#about-header a.button {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 130px;
+}
+
+.menu-bar {
+    width: 100%;
+    float: left;
+    background-color: #efefef;
+    padding: 20px 0;
+    margin-bottom: 60px;
+}
+
+.menu-bar ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar ul li {
+    display: inline-block;
+    padding: 10px 40px;
+    margin: 0;
+}
+
+.menu-bar ul li a img {
+    height: 40px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.menu-bar ul li a {
+    color: #999;
+    text-transform: uppercase;
+}
+
+.menu-bar ul li a.active {
+    border-bottom: 1px solid #999;
+}
+
+section#about-content h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section#about-content h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+section#values h3 img {
+    width: 30px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -7px;
+    margin-right: 10px;
+}
+
+/***************************************/
+/*************** Profile ***************/
+/***************************************/
+
+/* Header */
+
+section#profile {
+    margin-top: 60px;
+}
+
+section#profile h1 {
+    text-align: center;
+    margin: 40px 0;
+}
+
+section#profile h1 img {
+    width: 30px;
+    margin: -10px 5px 0 0;
+}
+
+section#profile .video {
+    width: 610px;
+    height: 457.5px;
+    background-color: #ccc;
+}
+
+section#profile .actions {
+    float: left;
+    width: 100%;
+}
+
+section#profile .actions a.button-green {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    width: 100%;
+}
+
+section#profile .actions a.button-lightgreen {
+    width: 45.94%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    min-height: 48px;
+}
+
+section#profile .actions a.button-lightgreen span {
+    display: none;
+}
+
+section#profile .actions a#message {
+    margin-right: 10px;
+}
+
+section#profile .actions a#follow {
+    margin-left: 10px;
+}
+
+section#profile .actions a.button-lightgreen img {
+    width: 20px;
+    margin-top: -3px;
+}
+
+section#profile .stats {
+    float: left;
+    margin-top: -20px;
+}
+
+section#profile .stat {
+    display: block;
+    float: left;
+}
+
+section#profile .hr {
+    float: left;
+}
+
+section#profile .stats h5 {
+    float: left;
+    font-size: 40px;
+    margin: 25px 5px 25px 0;
+}
+
+section#profile .stats h6 {
+    float: left;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 25px 0 25px 5px;
+}
+
+section#profile .info {
+    float: left;
+}
+
+section#profile .info ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0 30px 0;
+}
+
+section#profile .info ul li img {
+    width: 15px;
+    margin-right: 5px;
+}
+
+section#profile .info ul li a {
+    color: #333;
+    transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   -webkit-transition: all .1s ease-in-out;
+}
+
+section#profile .info ul li a:hover {
+    color: #42AA7D;
+    transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   -webkit-transition: all .1s ease-in-out;
+}
+
+section#profile #profile-content {
+    margin-top: 30px;
+}
+
+/* Rewards */
+
+.reward {
+    float: left;
+    width: 100%;
+    padding: 20px 20px 50px 20px;
+    margin: 20px 0;
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   -webkit-transition: all .1s ease-in-out;
+}
+
+.reward:hover {
+    border: 1px solid #efefef;
+    transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   -webkit-transition: all .1s ease-in-out;
+}
+
+.reward h4 {
+    font-size: 28px;
+    float: left;
+    width: 100%;
+    margin: 0;
+}
+
+.reward h5 {
+    font-size: 14px !important;
+    color: #999;
+    float: left;
+    width: 100%;
+    margin: 0;
+}
+
+.reward p {
+    float: left;
+    width: 100%;
+}
+
+.reward a {
+    display: block;
+    float: left;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 0 0 5px 5px;
+}
+
+.reward:hover a {
+    display: block;
+    float: left;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: #42AA7D;
+    border: 1px solid #42AA7D;
+}
+
+.reward:hover a:hover {
+    display: block;
+    float: left;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: #63CE9B;
+    border: 1px solid #63CE9B;
+}
+
+section#secondary-cta {
+    border-top: 1px solid #efefef;
+    padding: 60px 0 60px 0;
+}
+
+section#secondary-cta h6 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+a.pledge-button {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* Checkout */
+
+section#checkout-form {
+    margin-top: 60px;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    width: 100%;
+    margin: 60px 0;
+    padding: 40px;
+}
+
+section#checkout-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+section#checkout-form #address-info,
+section#checkout-form #billing-info {
+    margin-top: 60px;
+}
+
+#checkout-info h3 {
+    font-size: 50px;
+}
+
+#checkout-info .hr-with-margin {
+    float: right;
+}
+
+#checkout-info .reward {
+    widows: 100%;
+}
+
+#cards-image {
+    width: 250px;
+}
