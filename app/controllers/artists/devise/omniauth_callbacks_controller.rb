@@ -10,4 +10,10 @@ class Artists::Devise::OmniauthCallbacksController < Devise::OmniauthCallbacksCo
       redirect_to new_user_registration_url
     end
   end
+
+  def stripe_connect
+    # Delete the code inside of this method and write your own.
+    # The code below is to show you where to access the data.
+    raise request.env["omniauth.auth"].to_yaml
+  end
 end
