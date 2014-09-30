@@ -14,6 +14,7 @@ gem 'spring',        group: :development
 gem "better_errors", group: :development
 gem "binding_of_caller"
 gem 'social-share-button'
+gem 'omniauth-stripe-connect'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.3'
