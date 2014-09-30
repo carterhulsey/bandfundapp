@@ -10,7 +10,7 @@
             = form.label :price, "Price in Dollars"
             = form.text_field :price, :value => @reward.price
             = form.hidden_field :artist_id, :value => @reward.artist_id
-            = form.hidden_field :fan_id, :value => current_fan.id
+            = form.hidden_field :fan_id #:value => current_fan.id
           = submit_tag
       .small-4.columns
         .stats
