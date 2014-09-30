@@ -1,4 +1,9 @@
 class RewardsController < ApplicationController
+  def index
+    @rewards = Reward.where(:artist_id => params[:artist_id])
+    @artist = Artist.find_by(:id => params[:artist_id])
+  end
+
   def new
     @reward = current_artist.rewards.build
   end

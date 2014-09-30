@@ -36,7 +36,7 @@
                 = image_tag "icons/link.svg"
                 = artist.website_url
         .actions
-          %a.button.button-green.pledge-button{:href => "checkout.html"} Pledge
+          %a.button.button-green.pledge-button{:href => artist_rewards_path(params[:id])} Pledge
           %a#message.button.button-lightgreen{:href => "#"}
             %span Send Message
             = image_tag "icons/message.svg"
@@ -61,4 +61,4 @@
   .row
     .small-12.columns
       %h6 Earn rewards by pledging to Carter Hulsey
-      %a.button.button-green.pledge-button{:href => "checkout.html"} Pledge
+      %a.button.button-green.pledge-button{:href => artist_rewards_path(params[:id])} Pledge

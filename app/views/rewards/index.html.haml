@@ -1,0 +1,11 @@
+%section#profile
+  .container
+    .row
+      .small-8.columns   
+        %h5= @artist.pledges.count 
+        %h6 Supporters
+        - @rewards.each do |reward|
+          %h5= reward.title
+          %h5= reward.description
+          %h5= reward.price
+        %a.button.button-green{:href => new_reward_pledge_path(params[:artist_id])} Pledge

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :artists, only: :show do
-    resources :rewards, only: [:new, :create, :update]
+    resources :rewards, only: [:new, :create, :update, :index]
     resources :pledges, only: [:show, :new, :create]
   end
   root "welcome#index"
