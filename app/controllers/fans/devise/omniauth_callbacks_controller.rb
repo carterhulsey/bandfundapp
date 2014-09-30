@@ -1,6 +1,6 @@
-class Artists::Devise::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+class Fans::Devise::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def facebook
-    @user = Artist.from_omniauth(request.env["omniauth.auth"])
+    @user = Fan.from_omniauth(request.env["omniauth.auth"])
 
     if @user.persisted?
       sign_in_and_redirect :artist, @user, :event => :authentication #this will throw if @user is not activated
