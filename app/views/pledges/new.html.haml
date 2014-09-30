@@ -8,18 +8,21 @@
             = form.text_field :credit_card
           %p
             = form.label :price, "Price in Dollars"
-            = form.text_field :price
+            = form.text_field :price, :value => @reward.price
             = form.hidden_field :artist_id, :value => @reward.artist_id
             = form.hidden_field :fan_id, :value => current_fan.id
           = submit_tag
       .small-4.columns
         .stats
           .stat
-            %h5= @reward.title
+            %h5 Title:
+            %h6= @reward.title
           .hr
           .stat
-            %h5= @reward.description
+            %h5 Description:
+            %h6= @reward.description
           .hr
           .stat
-            %h5= @reward.price
+            %h5 Price:
+            %h6= @reward.price
         
