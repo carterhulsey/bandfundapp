@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :fans
+  devise_for :fans, controllers: { registrations: "fans/devise/registrations"}
   get "/artists/auth/:provider/callback" => "sessions#create"
   devise_for :artists, controllers: { registrations: "artists/devise/registrations"}
   
