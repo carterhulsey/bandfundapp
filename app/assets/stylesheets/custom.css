@@ -861,3 +861,11 @@ section#checkout-form #billing-info {
 #cards-image {
     width: 250px;
 }
+
+.stripe-connect {
+  background: image-url('blue.png');
+  color: transparent;
+  display: inline-block;
+  width: 190px;
+  line-height: 33px;
+}

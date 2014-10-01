@@ -34,7 +34,11 @@
 
     <div><%= f.submit "Update" %></div>
   <% end %>
-
+  <p> 
+    <% if current_artist.access_token == nil %>
+      <%=link_to( image_tag("stripe/blue.png"), "https://connect.stripe.com/oauth/authorize?response_type=code&scope=read_write&client_id=ca_4s1E1oegNa8lEDtOP1NTv8tXe0aw3Iqm") %>
+    <% end %>
+  </p>
   <p>
     <%= link_to 'Add Reward', [:new, resource, :reward] %>
   </p>
