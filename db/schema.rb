@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930211802) do
+ActiveRecord::Schema.define(version: 20141001183648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20140930211802) do
     t.integer  "pledge_id"
     t.string   "provider"
     t.string   "uid"
+    t.string   "stripe_id"
   end
 
   add_index "fans", ["email"], name: "index_fans_on_email", unique: true, using: :btree

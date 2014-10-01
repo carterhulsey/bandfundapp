@@ -14,15 +14,18 @@ class PledgesController < ApplicationController
     @reward = Reward.find_by(:id => params[:reward_id])
     @artist = Artist.find_by(:id => @reward.artist_id)
     
+    if current_fan.stripe_id == nil
     # Saves customer object into our stripe account, so we can save credit card information
-    customer = Stripe::Customer.create(
-      {:card => token,
-      :description => current_fan.email
-    }, ENV['STRIPE_SECRET']
-    )
+      customer = Stripe::Customer.create(
+        {:card => token,
+        :description => current_fan.email
+        }, ENV['STRIPE_SECRET']
+      )
+      current_fan.update_attributes(:stripe_id => customer.id)
+    end
 
     customer_token = Stripe::Token.create(
-      {:customer => customer.id},
+      {:customer => current_fan.stripe_id},
       @artist.access_token # user's access token from the Stripe Connect flow
     )
     
@@ -34,14 +37,16 @@ class PledgesController < ApplicationController
         :application_fee_percent => 20 #Percent we take for letting connected accounts use the service
         }, @artist.access_token
       )
+
+    raise customer
     
-    @pledge = Pledge.create(pledge_params)
-    if @pledge.save
-      ArtistPledge.create(pledge_id: @pledge.id, artist_id: @pledge.artist_id)
-      redirect_to artist_path(@pledge.artist_id)
-    else
-      render "new"
-    end
+   # @pledge = Pledge.create(pledge_params)
+    # if @pledge.save
+    #   ArtistPledge.create(pledge_id: @pledge.id, artist_id: @pledge.artist_id)
+    #   redirect_to artist_path(@pledge.artist_id)
+    # else
+    #   render "new"
+    # end
   end
 
   private
