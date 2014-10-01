@@ -34,21 +34,24 @@
 
     <div><%= f.submit "Update" %></div>
   <% end %>
-  <p> 
-    <% if current_artist.access_token == nil %>
+
+  <% if current_artist.access_token == nil %>
+    <p>
       <%=link_to( image_tag("stripe/blue.png"), "https://connect.stripe.com/oauth/authorize?response_type=code&scope=read_write&client_id=ca_4s1E1oegNa8lEDtOP1NTv8tXe0aw3Iqm") %>
-    <% end %>
-  </p>
-  <p>
-    <%= link_to 'Add Reward', [:new, resource, :reward] %>
-  </p>
-  <% if resource.rewards.count > 0 %>
-  <p>
-    Current rewards:
-  </p>
-  <%= render partial: 'artists/reward', collection: resource.rewards %>
-<%else%>
-    You don't have any rewards yet
+    </p>
+    <p>
+      <h5>Please connect to Stripe so you can create rewards for your fans"</h5>
+    </p>
+  <% else %>
+    <p>
+      <%= link_to 'Add Reward', [:new, resource, :reward] %>
+    </p>
+  <% end %>
+    <% if resource.rewards.count > 0 %>
+    <p>
+      Current rewards:
+    </p>
+    <%= render partial: 'artists/reward', collection: resource.rewards, locals: {pledge: false} %>
   <%end%>
 
   <%= link_to "Back", :back %>
