@@ -4,7 +4,8 @@
     .row
       #checkout-form.small-8.columns
         .row
-          %script.stripe-button{"data-amount" => @reward.price, "data-description" => @reward.title, "data-key" => @artist.stripe_publishable_key, :src => "https://checkout.stripe.com/checkout.js"}
+          = form_tag reward_pledges_path(params[:reward_id]) do 
+            %script.stripe-button{"data-amount" => @reward.price, "data-description" => @reward.title, "data-key" => ENV['STRIPE_PUBLISHABLE_KEY'], :src => "https://checkout.stripe.com/checkout.js"}
       #checkout-info.small-4.columns
         %img#cards-image{:alt => "", :src => image_path("cards.svg")}/
         .hr-with-margin

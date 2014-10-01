@@ -9,28 +9,32 @@ class PledgesController < ApplicationController
   end
 
   def create
+    stripe = params
     token = params[:stripeToken]
     @reward = Reward.find_by(:id => params[:reward_id])
     @artist = Artist.find_by(:id => @reward.artist_id)
-
-    @customer = Stripe::Customer.create({
-        :email => current_fan.email,
-        :card => params[:stripeToken],
-        :plan => params[:reward_id]
-        }, @artist.access_token
-      )
-
-    charge = Stripe::Charge.create({
-      :customer    => @customer.id,
-      :amount      => @reward.price,
-      :description => @reward.title,
-      :currency    => "usd",
-      :application_fee => 1122 #Amount charged to artist in cents
-      }, @artist.access_token # user's access token from the Stripe Connect flow
+    
+    # Saves customer object into our stripe account, so we can save credit card information
+    customer = Stripe::Customer.create(
+      {:card => token,
+      :description => current_fan.email
+    }, ENV['STRIPE_SECRET']
     )
 
-
-
+    customer_token = Stripe::Token.create(
+      {:customer => customer.id},
+      @artist.access_token # user's access token from the Stripe Connect flow
+    )
+    
+    # Creates a customer under a connected artists plan, and starts billing cycle
+    customer = Stripe::Customer.create({
+        :email => current_fan.email,
+        :card => customer_token.id,
+        :plan => params[:reward_id],
+        :application_fee_percent => 20 #Percent we take for letting connected accounts use the service
+        }, @artist.access_token
+      )
+    
     @pledge = Pledge.create(pledge_params)
     if @pledge.save
       ArtistPledge.create(pledge_id: @pledge.id, artist_id: @pledge.artist_id)
