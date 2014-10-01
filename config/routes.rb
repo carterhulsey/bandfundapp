@@ -10,7 +10,8 @@ Rails.application.routes.draw do
     get '/auth/facebook_artist/callback' => "artists/devise/omniauth_callbacks#facebook"
     get '/artists/auth/stripe_connect/callback' => "artists/devise/omniauth_callbacks#stripe_connect"
   end
-  
+
+  get 'auth/failure' => 'application#auth_failure'  
 
   resources :rewards, only: :show do 
     resources :pledges, only: [:new, :create, :update]
