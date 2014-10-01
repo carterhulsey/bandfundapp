@@ -4,6 +4,10 @@ class Artist < ActiveRecord::Base
   has_many :artist_pledges
   has_many :pledges, :through => :artist_pledges 
 
+  has_attached_file :photo, :styles => { :medium => ["300x300>", :jpg], :thumb => ["100x100>", :jpg] }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
+
+
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   def self.from_omniauth(auth)
