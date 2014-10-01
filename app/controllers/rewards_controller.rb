@@ -11,6 +11,13 @@ class RewardsController < ApplicationController
   def create
     reward = current_artist.rewards.build(reward_params)
     if reward.save
+      test = Stripe::Plan.create({
+      :amount => reward.price,
+      :interval => 'month',
+      :name => reward.title,
+      :currency => 'usd',
+      :id => reward.id
+    }, current_artist.access_token)
       redirect_to [:edit, current_artist, :registration]
     end
   end
@@ -18,6 +25,6 @@ class RewardsController < ApplicationController
   protected
 
   def reward_params
-    params.require(:reward).permit(:title, :description, :price, :address_required)
+    params.require(:reward).permit(:id, :title, :description, :price, :address_required)
   end
 end

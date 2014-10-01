@@ -36,7 +36,7 @@
   <% end %>
   <p> 
     <% if current_artist.access_token == nil %>
-      <%=link_to( image_tag("stripe/blue.png"), "https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_4s1E1oegNa8lEDtOP1NTv8tXe0aw3Iqm") %>
+      <%=link_to( image_tag("stripe/blue.png"), "https://connect.stripe.com/oauth/authorize?response_type=code&scope=read_write&client_id=ca_4s1E1oegNa8lEDtOP1NTv8tXe0aw3Iqm") %>
     <% end %>
   </p>
   <p>
