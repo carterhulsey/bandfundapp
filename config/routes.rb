@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :fans, controllers: { registrations: "fans/devise/registrations"}
+  devise_for :fans, controllers: { registrations: "fans/devise/registrations", sessions: "fans/devise/sessions"}
   devise_for :artists, controllers: { registrations: "artists/devise/registrations", sessions: "artists/devise/sessions"}
   
   devise_scope :fan do

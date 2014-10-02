@@ -1,0 +1,31 @@
+%section#login-fb
+  .row
+    .small-6.small-offset-3.columns.well
+      .facebook-sign-in
+        %h3 Login with Facebook
+        %a.button.button-fb{:href => "profile-logged-in.html"}
+          %img{:alt => "", :src => image_path("icons/facebook.svg")}>/
+          Login with Facebook
+          %br
+          %br
+          = link_to "Sign in without Facebook",{view: :regular_sign_in}, remote: true
+      .regular-sign-in
+        %h2 Log in
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          %div
+            = f.label :email
+            %br/
+            = f.email_field :email, autofocus: true
+          %div
+            = f.label :password
+            %br/
+            = f.password_field :password, autocomplete: "off"
+          - if devise_mapping.rememberable?
+            %div
+              %tr
+                %td
+                  = f.label :remember_me
+                  = f.check_box :remember_me,:style => "display:inline"
+          %div= f.submit "Log in"
+          = link_to "Sign in with Facebook",{view: :facebook_sign_in}, remote: true
+      = render "artists/shared/links"

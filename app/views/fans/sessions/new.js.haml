@@ -1,0 +1,9 @@
+- if params[:view].present?
+  - case params[:view]
+  - when 'regular_sign_in'
+    $('.facebook-sign-in').hide();
+    $('.regular-sign-in').show();
+  - when 'facebook_sign_in'
+    $('.regular-sign-in').hide();
+    $('.facebook-sign-in').show();
+
