@@ -994,3 +994,7 @@ section#profile-editor {
 .regular-signup {
     display: none;
 }
+
+.regular-sign-in {
+    display: none;
+}
