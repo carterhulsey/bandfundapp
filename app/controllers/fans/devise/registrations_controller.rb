@@ -21,4 +21,12 @@ class Fans::Devise::RegistrationsController < Devise::RegistrationsController
       render "edit"
     end
   end
+
+  def new
+    @fan = Fan.new
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 end

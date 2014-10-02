@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :fans, controllers: { registrations: "fans/devise/registrations"}
   devise_for :artists, controllers: { registrations: "artists/devise/registrations"}
-
+  
   devise_scope :fan do
     get '/auth/facebook_fan/callback' => "fans/devise/omniauth_callbacks#facebook"
   end
