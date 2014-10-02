@@ -38,6 +38,8 @@
         #login
           - if current_artist
             = link_to 'Account', artists_path
+          - elsif current_fan
+            = link_to "Sign out", destroy_fan_session_path, method: :delete
           - else
             %a{:href => new_artist_session_path} Login
     = yield
