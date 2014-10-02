@@ -990,3 +990,7 @@ section#login-fb .button img {
 section#profile-editor {
     margin: 60px;
 }
+
+.regular-signup {
+    display: none;
+}

@@ -21,4 +21,12 @@ class Artists::Devise::RegistrationsController < Devise::RegistrationsController
       render "edit"
     end
   end
+
+  def new
+    @artist = Artist.new
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 end
