@@ -1,0 +1,10 @@
+- if params[:view].present?
+  - case params[:view]
+  - when 'dashboard_fans'
+    $('.dashboard').html('#{j render "fans"}');
+  - when 'dashboard_rewards'
+    $('.dashboard').html('#{j render "rewards"}');
+  - when 'dashboard_payments'
+    $('.dashboard').html('#{j render "payments"}');
+  - when 'dashboard_profile'
+    $('.dashboard').html('#{j render "profile"}');

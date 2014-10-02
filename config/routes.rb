@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     resources :pledges, only: [:new, :create, :update]
   end
 
-  resources :artists, only: :show do
+  resources :artists, only: [:show, :index] do
     resources :rewards, only: [:new, :create, :update, :index]
     resources :pledges, only: [:show, :new, :create]
   end

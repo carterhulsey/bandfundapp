@@ -1,0 +1,20 @@
+#subnav
+  %ul
+    %li
+      %a
+        %img{:alt => "", :src => image_path("icons/fans.svg")}>/
+        = link_to "Fans",{view: :dashboard_fans}, remote: true, class: ''
+    %li
+      %a
+        %img{:alt => "", :src => image_path("icons/rewards.svg")}>/
+        = link_to "Rewards",{view: :dashboard_rewards}, remote: true, class: ''
+    %li
+      %a
+        %img{:alt => "", :src => image_path("icons/creditcard.svg")}>/
+        = link_to "Payment Info",{view: :dashboard_payments}, remote: true, class: ''
+    %li
+      %a
+        %img{:alt => "", :src => image_path("icons/edit.svg")}>/
+        = link_to "Profile",{view: :dashboard_profile}, remote: true, class: ''
+
+.dashboard

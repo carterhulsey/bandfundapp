@@ -1,5 +1,13 @@
 class ArtistsController < ApplicationController
   helper_method :artist
+  respond_to :js
+
+  def index
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 
   protected
 

@@ -37,7 +37,7 @@
         %a{:href => "about.html"} About
         #login
           - if current_artist
-            = link_to 'Logout', destroy_artist_session_path, method: :delete
+            = link_to 'Account', artists_path
           - else
             %a{:href => new_artist_session_path} Login
     = yield

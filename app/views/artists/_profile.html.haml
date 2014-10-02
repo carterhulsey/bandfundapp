@@ -1,0 +1,32 @@
+%section#profile-editor
+  .row
+    .small-12.columns
+      %h2 Edit Profile
+  .row
+    .small-12.columns
+      .well
+        %form#my-awesome-dropzone.dropzone{:action => ""}
+          .row
+            .small-4.columns
+              %input#photo-dropzone{:name => "file", :type => "file"}/
+            .small-8.columns
+              .row
+                .small-12.columns
+                  %label{:for => "Name"} Name
+                  %input{:name => "Name", :type => "text"}/
+                .small-6.columns
+                  %label{:for => "Website"} Website
+                  %input{:name => "Website", :type => "text"}/
+                .small-6.columns
+                  %label{:for => "Itunes"} Itunes URL
+                  %input{:name => "Itunes", :type => "text"}/
+                .small-6.columns
+                  %label{:for => "Video"} Youtube Video URL (For Profile)
+                  %input{:name => "Video", :type => "text"}/
+                .small-6.columns
+                  %label{:for => "Email"} Admin Email
+                  %input{:name => "Email", :type => "text"}/
+          .row
+            .small-12.columns.pad-top
+              %label{:for => "RTE"} Content
+              %input.jqte{:name => "input", :type => "text", :value => ""}/
