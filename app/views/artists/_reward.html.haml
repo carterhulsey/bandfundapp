@@ -12,3 +12,9 @@
       %h5 Supporters
       %p= reward.description
       %a.button.button-green{:href => edit_artist_reward_path(current_artist, reward)} Edit
+- if new_pledge
+  .reward
+    %h4== #{number_to_currency(reward.price, precision:0)} Per Month
+    %h5 21 Supporters
+    %p=  reward.description
+    %a.button.button-green{:href => new_reward_pledge_path(@reward)} Pledge

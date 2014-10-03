@@ -2,7 +2,8 @@ class PledgesController < ApplicationController
   def new
     @pledge = Pledge.new
     @reward = Reward.find_by(:id => params[:reward_id])
-    @artist = Artist.find_by(:id => @reward.id)
+    @artist = Artist.find_by(:id => @reward.artist_id)
+    @rewards = Reward.where(:id => @artist.id)
   end
 
   def show
