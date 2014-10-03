@@ -1,6 +1,9 @@
-%td Scott Fahrig
-%td scott@gmail.com
-%td 900 N Main Street, Joplin, MO 64804
+%td 
+%td= pledge.email
+- if pledge.address2 != nil
+  %td= pledge.address1 + " " + pledge.address2
+- else
+  %td= pledge.address1
 %td Dec 2013
 %td $15/m
 %td
