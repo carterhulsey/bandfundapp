@@ -3,13 +3,17 @@
     .small-12.columns
       %h2 Your Fans
     .small-12.columns
-      %table
-        %tr
-          %th Name
-          %th Email
-          %th Address
-          %th Fan Since
-          %th Reward Level
-          %th Action
-        %tr
-          = render partial: 'fan', collection: current_artist.pledges
+      -if current_artist.pledges == nil
+        %h2 You currently have no fans!
+      -else
+        %table
+          %tr
+            %th Name
+            %th Email
+            %th Address
+            %th Fan Since
+            %th Reward Level
+            %th Action
+          = render partial: 'pledge', collection: current_artist.pledges
+
+

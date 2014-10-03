@@ -5,4 +5,4 @@
     .small-10.columns
       %a.button.button-clear-green{:href => new_artist_reward_path(current_artist)} Add Reward
   .row
-    = render partial:'reward', collection: current_artist.rewards, locals: {pledge: false, edit: true}
+    = render partial:'reward', collection: current_artist.rewards, locals: {pledge: false, edit: true, new_pledge: false}
