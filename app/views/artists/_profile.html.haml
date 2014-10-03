@@ -6,6 +6,8 @@
     .small-12.columns
       .well
         %form#my-awesome-dropzone.dropzone{:action => ""}
+          = form_for(current_artist, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+            = devise_error_messages!
           .row
             .small-4.columns
               %input#photo-dropzone{:name => "file", :type => "file"}/
