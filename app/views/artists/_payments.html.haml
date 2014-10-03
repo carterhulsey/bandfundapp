@@ -9,24 +9,11 @@
       %h3
         To use Bandfund, you'll need to set up a
         %a{:href => "http://stripe.com", :target => "_blank"} Stripe
-        account. After you do, enter your credentials here.
-      %form{:action => ""}
-        %label{:for => "API Key"} API Key
-        %input{:name => "API Key", :placeholder => "K39XHD6D2JD9DLJF8DHSK", :type => "text"}/
-        %label{:for => "API Secret"} API Secret
-        %input{:name => "API Secret", :placeholder => "J3JD7DBKW97DN3RKFDLSL3", :type => "text"}/
-        .pad-top.pad-bottom
-          %h3 For security's sake, do us a favor and reenter your password.
-          %label{:for => "Password"} Password
-          %input{:name => "Password", :type => "text"}/
-        %submit.button.button-green Confirm
-    .small-4.columns
-      %ol
-        %li
-          Go to
-          %a{:href => "http://stripe.com"} stripe.com
-          and sign up for an account.
-        %li From your Stripe admin dashboard, go to account info.
-        %li Generate your API key and API secret.
-        %li Come back here and enter your new API keys.
-        %li Profit!
+        - if current_artist.access_token == nil
+          %p
+            = link_to( image_tag("stripe/blue.png"), "https://connect.stripe.com/oauth/authorize?response_type=code&scope=read_write&client_id=ca_4s1E1oegNa8lEDtOP1NTv8tXe0aw3Iqm")
+          %p
+          %h5 Please connect to Stripe so you can create rewards for your fans"
+        - else 
+          %h3 You're currently signed up with stripe
+   
