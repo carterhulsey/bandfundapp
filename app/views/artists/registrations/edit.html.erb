@@ -51,7 +51,7 @@
     <p>
       Current rewards:
     </p>
-    <%= render partial: 'artists/reward', collection: resource.rewards, locals: {pledge: false} %>
+    <%= render partial: 'artists/reward', collection: resource.rewards, locals: {pledge: false, edit: true} %>
   <%end%>
 
   <%= link_to "Back", :back %>

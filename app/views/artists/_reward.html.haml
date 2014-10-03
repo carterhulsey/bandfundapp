@@ -1,10 +1,14 @@
-.reward
-  %h3== #{number_to_currency(reward.price, precision:0)} Per Month
-  %h5 Supporters
-  %p= reward.description
-  - if pledge
+- if pledge
+  .reward
+    %h3== #{number_to_currency(reward.price, precision:0)} Per Month
+    %h5 Supporters
+    %p= reward.description
     %h5= artist.number_of_supporters
     %a.button.button-green{:href => new_reward_pledge_path(reward)} Pledge
-  - if edit
-    %h5= #current_artist.number_of_supporters
-    %a.button.button-green{:href => edit_artist_reward_path(current_artist, reward)} Edit
+- if edit
+  .small-4.columns
+    .reward
+      %h3== #{number_to_currency(reward.price, precision:0)} Per Month
+      %h5 Supporters
+      %p= reward.description
+      %a.button.button-green{:href => edit_artist_reward_path(current_artist, reward)} Edit
