@@ -18,4 +18,12 @@ class Artists::Devise::OmniauthCallbacksController < Devise::OmniauthCallbacksCo
     Artist.stripe_params(@response, @user)
     redirect_to root_url
   end
+
+  def after_sign_in_path_for(resource)
+    artists_path
+  end
+
+  def after_sign_up_path_for(resource)
+    artists_path
+  end
 end
