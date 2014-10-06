@@ -9,7 +9,7 @@ class Artists::Devise::OmniauthCallbacksController < Devise::OmniauthCallbacksCo
       session["devise.facebook_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url
     end
-  end
+  end 
 
   def stripe_connect
     @user = Artist.find_by(id: current_artist.id)

@@ -16,6 +16,9 @@
       %a
         %img{:alt => "", :src => image_path("icons/edit.svg")}>/
         = link_to "Profile",{view: :dashboard_profile}, remote: true, class: ''
+    %li
+      %a
+        %img{:alt => "", :src => image_path("icons/logout.svg")}>/
+        = link_to "Log Out", destroy_artist_session_path, method: :delete
 
 .dashboard
-= link_to "Sign out", destroy_artist_session_path, method: :delete
