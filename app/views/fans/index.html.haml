@@ -28,93 +28,15 @@
       .carousel-inner
         .item.active
           %ul.thumbnails
-            %li.card
-              .thumbnail
-                %a{:href => "profile.html"}
-                  %img{:alt => "", :src => image_path("carter.png")}/
-              .caption
-                %h3 Carter Hulsey
-                %h4 Singer/Songwriter
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
-                %a.button.button-green{:href => "profile.html"} Pledge
-            %li.card
-              .thumbnail
-                %a{:href => "profile.html"}
-                  %img{:alt => "", :src => image_path("carter.png")}/
-              .caption
-                %h3 Carter Hulsey
-                %h4 Singer/Songwriter
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
-                %a.button.button-green{:href => "profile.html"} Pledge
-            %li.card
-              .thumbnail
-                %a{:href => "profile.html"}
-                  %img{:alt => "", :src => image_path("carter.png")}/
-              .caption
-                %h3 Carter Hulsey
-                %h4 Singer/Songwriter
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
-                %a.button.button-green{:href => "profile.html"} Pledge
+            = render partial:'artists', collection: @artists[0..2]
         / /Page1
         .item
           %ul.thumbnails
-            %li.card
-              .thumbnail
-                %a{:href => "profile.html"}
-                  %img{:alt => "", :src => image_path("carter.png")}/
-              .caption
-                %h3 Carter Hulsey
-                %h4 Singer/Songwriter
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
-                %a.button.button-green{:href => "profile.html"} Pledge
-            %li.card
-              .thumbnail
-                %a{:href => "profile.html"}
-                  %img{:alt => "", :src => image_path("carter.png")}/
-              .caption
-                %h3 Carter Hulsey
-                %h4 Singer/Songwriter
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
-                %a.button.button-green{:href => "profile.html"} Pledge
-            %li.card
-              .thumbnail
-                %a{:href => "profile.html"}
-                  %img{:alt => "", :src => image_path("carter.png")}/
-              .caption
-                %h3 Carter Hulsey
-                %h4 Singer/Songwriter
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
-                %a.button.button-green{:href => "profile.html"} Pledge
+            = render partial:'artists', collection: @artists[0..2]
         / /Page2
         .item
           %ul.thumbnails
-            %li.card
-              .thumbnail
-                %a{:href => "profile.html"}
-                  %img{:alt => "", :src => "img/carter.png"}/
-              .caption
-                %h3 Carter Hulsey
-                %h4 Singer/Songwriter
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
-                %a.button.button-green{:href => "profile.html"} Pledge
-            %li.card
-              .thumbnail
-                %a{:href => "profile.html"}
-                  %img{:alt => "", :src => "img/carter.png"}/
-              .caption
-                %h3 Carter Hulsey
-                %h4 Singer/Songwriter
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
-                %a.button.button-green{:href => "profile.html"} Pledge
-            %li.card
-              .thumbnail
-                %a{:href => "profile.html"}
-                  %img{:alt => "", :src => "img/carter.png"}/
-              .caption
-                %h3 Carter Hulsey
-                %h4 Singer/Songwriter
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu.
-                %a.button.button-green{:href => "profile.html"} Pledge
+            = render partial:'artists', collection: @artists[0..2]
         / /Page3
       .control-box
         %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"}

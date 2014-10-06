@@ -1,0 +1,11 @@
+%li.card
+  .thumbnail
+    - if artists.image == nil
+      = link_to( image_tag("http://placehold.it/3300x500&text=fanheader"), artist_path(artists.id))
+    -else
+      = link_to( image_tag(artists.image), artist_path(artists.id))
+  .caption
+    %h3= artists.name
+    %h4= artists.genre
+    %p= artists.about_me
+    %a.button.button-green{:href => new_reward_pledge_path(artists.id)} Pledge
