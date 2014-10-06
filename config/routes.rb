@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get 'auth/failure' => 'application#auth_failure'  
 
-  resources :fans, only: :show
+  resources :fans, only: [:show, :index]
 
   resources :about, only: :index
 

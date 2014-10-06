@@ -8,6 +8,6 @@ class Fans::Devise::SessionsController < Devise::SessionsController
   end
 
   def after_sign_in_path_for(resource)
-    fan_path
+    fan_path(current_fan)
   end
 end
