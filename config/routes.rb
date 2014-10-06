@@ -6,12 +6,13 @@ Rails.application.routes.draw do
   devise_scope :fan do
     get '/auth/facebook_fan/callback' => "fans/devise/omniauth_callbacks#facebook"
   end
+
   devise_scope :artist do
     get '/auth/facebook_artist/callback' => "artists/devise/omniauth_callbacks#facebook"
     get '/artists/auth/stripe_connect/callback' => "artists/devise/omniauth_callbacks#stripe_connect"
   end
 
-  resources :about
+  get 'auth/failure' => 'application#auth_failure'  
 
   resources :rewards, only: :show do 
     resources :pledges, only: [:new, :create, :update]
