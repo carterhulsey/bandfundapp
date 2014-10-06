@@ -3,77 +3,17 @@
     .small-12.columns
       %h2 Your Fans
     .small-12.columns
-      %table
-        %tr
-          %th Name
-          %th Email
-          %th Address
-          %th Fan Since
-          %th Reward Level
-          %th Action
-        %tr
-          %td Scott Fahrig
-          %td scott@gmail.com
-          %td 900 N Main Street, Joplin, MO 64804
-          %td Dec 2013
-          %td $15/m
-          %td
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/message-grey.svg")}/
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/box.svg")}/
-        %tr
-          %td Kevin Deems
-          %td kevin@gmail.com
-          %td 350 Baltic Ave, Joplin, MO 64804
-          %td Feb 2014
-          %td $10/m
-          %td
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/message-grey.svg")}/
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/box.svg")}/
-        %tr
-          %td Scott Fahrig
-          %td scott@gmail.com
-          %td 900 N Main Street, Joplin, MO 64804
-          %td Dec 2013
-          %td $15/m
-          %td
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/message-grey.svg")}/
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/box.svg")}/
-        %tr
-          %td Kevin Deems
-          %td kevin@gmail.com
-          %td 350 Baltic Ave, Joplin, MO 64804
-          %td Feb 2014
-          %td $10/m
-          %td
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/message-grey.svg")}/
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/box.svg")}/
-        %tr
-          %td Scott Fahrig
-          %td scott@gmail.com
-          %td 900 N Main Street, Joplin, MO 64804
-          %td Dec 2013
-          %td $15/m
-          %td
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/message-grey.svg")}/
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/box.svg")}/
-        %tr
-          %td Kevin Deems
-          %td kevin@gmail.com
-          %td 350 Baltic Ave, Joplin, MO 64804
-          %td Feb 2014
-          %td $10/m
-          %td
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/message-grey.svg")}/
-            %a{:href => ""}
-              %img{:alt => "", :src => image_path("icons/box.svg")}/
+      -if current_artist.pledges == nil
+        %h2 You currently have no fans!
+      -else
+        %table
+          %tr
+            %th Name
+            %th Email
+            %th Address
+            %th Fan Since
+            %th Reward Level
+            %th Action
+          = render partial: 'pledge', collection: current_artist.pledges
+
+

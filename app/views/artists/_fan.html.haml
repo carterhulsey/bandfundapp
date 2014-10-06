@@ -1,0 +1,13 @@
+%td 
+%td= pledge.email
+- if pledge.address2 != nil
+  %td= pledge.address1 + " " + pledge.address2
+- else
+  %td= pledge.address1
+%td Dec 2013
+%td $15/m
+%td
+  %a{:href => ""}
+    %img{:alt => "", :src => image_path("icons/message-grey.svg")}/
+  %a{:href => ""}
+    %img{:alt => "", :src => image_path("icons/box.svg")}/

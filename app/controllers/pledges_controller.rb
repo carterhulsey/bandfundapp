@@ -2,7 +2,8 @@ class PledgesController < ApplicationController
   def new
     @pledge = Pledge.new
     @reward = Reward.find_by(:id => params[:reward_id])
-    @artist = Artist.find_by(:id => @reward.id)
+    @artist = Artist.find_by(:id => @reward.artist_id)
+    @rewards = Reward.where(:id => @artist.id)
   end
 
   def show
@@ -39,8 +40,8 @@ class PledgesController < ApplicationController
         :application_fee_percent => 20 #Percent we take for letting connected accounts use the service
         }, @artist.access_token
       )
-
-   @pledge = Pledge.create(artist_id: @artist.id, fan_id: current_fan.id, plan: @reward.title, price: @reward.price)
+    
+   @pledge = Pledge.create(artist_id: @artist.id, fan_id: current_fan.id, plan: @reward.title, price: @reward.price, email: params[:Email], address1: params[:Address1], address2: params[:Address2], city: params[:City], state: params[:State], zip: params[:ZIP], country: params[:Country], first_name: params[:First_Name], last_name: params[:Last_Name])
     if @pledge.save
       ArtistPledge.create(pledge_id: @pledge.id, artist_id: @pledge.artist_id, price: @reward.price)
       redirect_to artist_path(@pledge.artist_id)
@@ -51,6 +52,6 @@ class PledgesController < ApplicationController
 
   private
   def pledge_params
-    params.require(:pledge).permit(:artist_id, :fan_id, :credit_card, :price)
+    params.require(:pledge).permit(:artist_id, :fan_id, :plan, :price, :email, :address1, :address2, :city, :state, :zip, :first_name, :last_name)
   end
 end
