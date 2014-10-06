@@ -1,14 +1,17 @@
 %section#cta
-  #fan
-    = image_tag "ipod-white.svg"
-    .signup-cta
-      %h2 I am a Fan
-      %a.button.button-clear-white{:href => new_fan_registration_path} Sign Up
-  #artist
-    = image_tag "ipod-grey.svg"
-    .signup-cta
-      %h2 I am an Artist
-      %a.button.button-clear{:href => new_artist_registration_path} Sign Up
+  - if current_fan
+    = image_tag("http://placehold.it/1300x500&text=fanheader")
+  - else
+    #fan
+      = image_tag "ipod-white.svg"
+      .signup-cta
+        %h2 I am a Fan
+        %a.button.button-clear-white{:href => new_fan_registration_path} Sign Up
+    #artist
+      = image_tag "ipod-grey.svg"
+      .signup-cta
+        %h2 I am an Artist
+        %a.button.button-clear{:href => new_artist_registration_path} Sign Up
 %section#about
   .container
     .about-info
