@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20141001224954) do
-=======
 ActiveRecord::Schema.define(version: 20141003220410) do
->>>>>>> origin/fan_dashboard
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
