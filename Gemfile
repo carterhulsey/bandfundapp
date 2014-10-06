@@ -18,6 +18,7 @@ gem 'omniauth-stripe-connect'
 gem 'stripe'
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
+gem 'cocaine'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.3'
