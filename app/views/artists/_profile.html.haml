@@ -5,7 +5,7 @@
   .row
     .small-12.columns
       .well
-        %form#my-awesome-dropzone.dropzone{:action => ""}
+        =form_tag(artist_registration_path, method: 'PUT', id: "my-awesome-dropzone.dropzone") do 
           .row
             .small-4.columns
               %input#photo-dropzone{:name => "file", :type => "file"}/
@@ -30,3 +30,4 @@
             .small-12.columns.pad-top
               %label{:for => "RTE"} Content
               %input.jqte{:name => "input", :type => "text", :value => ""}/
+          = submit_tag "Submit", class: "button button-green"

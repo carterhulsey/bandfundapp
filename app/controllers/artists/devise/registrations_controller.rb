@@ -36,4 +36,8 @@ class Artists::Devise::RegistrationsController < Devise::RegistrationsController
       format.js
     end
   end
+
+  def after_sign_up_path_for(resource)
+    artists_path
+  end
 end
