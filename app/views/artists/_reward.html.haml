@@ -1,6 +1,7 @@
 .reward
-  %h3== #{number_to_currency(reward.price, precision:0)} Per Month
-  %h5 Supporters
+  %h4== #{number_to_currency(reward.price, precision:0)} Per Month
+  %h5=# artist.number_of_supporters
+  %h6 Supporters
   %p= reward.description
   - if pledge
     %h5= artist.number_of_supporters
