@@ -20,6 +20,7 @@ gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
 gem 'cocaine'
 gem 'tinymce-rails'
+gem 'youtube_addy'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.3'
