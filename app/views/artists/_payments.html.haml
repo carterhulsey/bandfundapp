@@ -8,10 +8,10 @@
     .small-8.columns
       %h3
         To use Bandfund, you'll need to set up a
-        %a{:href => "http://stripe.com", :target => "_blank"} Stripe
+        %a{:href => "http://stripe.com", :target => "_blank"} Stripe account.
         - if current_artist.access_token == nil
           %p
-            = link_to( image_tag("stripe/blue.png"), "https://connect.stripe.com/oauth/authorize?response_type=code&scope=read_write&client_id=ca_4s1E1oegNa8lEDtOP1NTv8tXe0aw3Iqm")
+            = link_to( image_tag("stripe/blue.png"), "https://connect.stripe.com/oauth/authorize?response_type=code&scope=read_write&client_id=#{ENV['STRIPE_CONNECT_CLIENT_ID']}")
           %p
           %h5 Please connect to Stripe so you can create rewards for your fans"
         - else 

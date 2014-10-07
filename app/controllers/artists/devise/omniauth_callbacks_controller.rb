@@ -15,7 +15,7 @@ class Artists::Devise::OmniauthCallbacksController < Devise::OmniauthCallbacksCo
     @user = Artist.find_by(id: current_artist.id)
     @code = params[:code]
     line = Cocaine::CommandLine.new(`curl -X POST https://connect.stripe.com/oauth/token -d client_secret=#{ENV['STRIPE_SECRET']} -d code=#{@code} -d grant_type=authorization_code`)
-    @response = ActiveSupport::JSON.decode(line.command)
+    @response = ActiveSupport::JSON.decode(line.run)
     Artist.stripe_params(@response, @user)
     redirect_to root_url
   end
