@@ -8,4 +8,4 @@
     %h3= artists.name
     %h4= artists.genre
     %p= artists.about_me[0...100] unless artists.about_me == nil
-    %a.button.button-green{:href => new_reward_pledge_path(artists.id)} Pledge
+    %a.button.button-green{:href => artist_path(artists.id)} Pledge

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141003220410) do
+ActiveRecord::Schema.define(version: 20141007031318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20141003220410) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "video_url"
   end
 
   add_index "artists", ["email"], name: "index_artists_on_email", unique: true, using: :btree
@@ -101,6 +102,7 @@ ActiveRecord::Schema.define(version: 20141003220410) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "country"
+    t.integer  "reward_id"
   end
 
   create_table "rewards", force: true do |t|
