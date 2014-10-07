@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
+    @artists = Artist.all
     if current_fan
       redirect_to fans_path 
     end
