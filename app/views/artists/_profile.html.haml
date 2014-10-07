@@ -29,10 +29,10 @@
           .row
             .small-12.columns.pad-top
               = form.label :about_me, "Content"
-              = form.text_area :about_me, class: "jqte"
+              = form.text_area :about_me, class: "editor"
           = submit_tag "Submit", class: "button button-green"
-- content_for(:page_javascript) do
-  :javascript
-    $(document).ready(function() {
-        $(".jqte").jqte();
-    });
+:javascript
+  tinyMCE.init({
+    selector: 'textarea.editor'
+  });
+  

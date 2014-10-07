@@ -16,5 +16,7 @@
 //= require vendor/modernizr
 //= require bootstrap.min
 //= require foundation.min
-//= require jquery-te-1.4.0.min
+//= require tinymce
 //= require app
+//= require_tree .
+
