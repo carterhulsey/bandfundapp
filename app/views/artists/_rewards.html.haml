@@ -3,6 +3,10 @@
     .small-2.columns
       %h2 Your Rewards
     .small-10.columns
-      %a.button.button-clear-green{:href => new_artist_reward_path(current_artist)} Add Reward
+      - if current_artist.access_token == nil
+        %h5 Please sign up with stripe to create rewards.
+        = link_to "Connect with Stripe",{view: :dashboard_payments}, remote: true
+      - else
+        %a.button.button-clear-green{:href => new_artist_reward_path(current_artist)} Add Reward
   .row
     = render partial:'reward', collection: current_artist.rewards, locals: {pledge: false, edit: true, new_pledge: false}
