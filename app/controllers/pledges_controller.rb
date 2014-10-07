@@ -25,14 +25,11 @@ class PledgesController < ApplicationController
       )
       current_fan.update_attributes(:stripe_id => customer.id)
     end
-    
-    # Creates new token to add a customer to a plan
     customer_token = Stripe::Token.create(
       {:customer => current_fan.stripe_id},
       @artist.access_token # user's access token from the Stripe Connect flow
     )
-    
-    # Creates a customer under a connected artists plan, and starts billing cycle
+
     customer = Stripe::Customer.create({
         :email => current_fan.email,
         :card => customer_token.id,
@@ -40,6 +37,7 @@ class PledgesController < ApplicationController
         :application_fee_percent => 20 #Percent we take for letting connected accounts use the service
         }, @artist.access_token
       )
+    
     
    @pledge = Pledge.create(artist_id: @artist.id, fan_id: current_fan.id, plan: @reward.title, price: @reward.price, email: params[:Email], address1: params[:Address1], address2: params[:Address2], city: params[:City], state: params[:State], zip: params[:ZIP], country: params[:Country], first_name: params[:First_Name], last_name: params[:Last_Name], reward_id: @reward.id)
     if @pledge.save
