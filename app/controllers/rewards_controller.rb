@@ -18,7 +18,7 @@ class RewardsController < ApplicationController
       :currency => 'usd',
       :id => reward.id
     }, current_artist.access_token)
-      redirect_to [:edit, current_artist, :registration]
+      redirect_to artists_path
     end
   end
 
