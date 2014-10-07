@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require vendor/modernizr
-//= require foundation.min
-//= require app
 //= require bootstrap.min
+//= require foundation.min
+//= require jquery-te-1.4.0.min
+//= require app
