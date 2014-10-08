@@ -6,7 +6,8 @@
     .row
       .small-8.columns
         .video
-      / small-8
+          =raw YouTubeAddy.youtube_embed_url(artist.video_url,610,457.5)
+        / small-8
       .small-4.columns
         .stats
           .stat
@@ -53,7 +54,7 @@
       .small-8.columns
         %h2== About #{artist.name}
         .hr-with-margin
-          = artist.about_me
+          = artist.about_me.html_safe unless artist.about_me == nil
       .small-4.columns
         %h2 Rewards
         .hr-with-margin

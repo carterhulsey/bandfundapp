@@ -12,7 +12,7 @@ class RewardsController < ApplicationController
     reward = current_artist.rewards.build(reward_params)
     if reward.save
     Stripe::Plan.create({
-      :amount => reward.price,
+      :amount => (reward.price * 100).to_i,
       :interval => 'month',
       :name => reward.title,
       :currency => 'usd',

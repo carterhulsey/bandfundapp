@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require vendor/modernizr
-//= require foundation.min
-//= require app
 //= require bootstrap.min
+//= require foundation.min
+//= require tinymce
+//= require app
+//= require_tree .
+

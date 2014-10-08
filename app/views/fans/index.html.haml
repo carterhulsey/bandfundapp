@@ -23,20 +23,20 @@
         %h6 Permo
 %section#discover
   %h2 Discover
-  .container
+  .container 
     #myCarousel.carousel.slide
       .carousel-inner
-        .item.active
+        .item.active          
           %ul.thumbnails
-            = render partial:'artists', collection: @artists[0..2]
+            = render partial:'artist', collection: @artists1
         / /Page1
         .item
           %ul.thumbnails
-            = render partial:'artists', collection: @artists[0..2]
+            = render partial:'artist', collection: @artists2
         / /Page2
         .item
           %ul.thumbnails
-            = render partial:'artists', collection: @artists[0..2]
+            = render partial:'artist', collection: @artists3
         / /Page3
       .control-box
         %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"}

@@ -43,15 +43,15 @@
       .carousel-inner
         .item.active
           %ul.thumbnails
-            = render partial:'fans/artists', collection: @artists[0..2]
+            = render partial:'fans/artist', collection: @artists1
         / /Page1
         .item
           %ul.thumbnails
-            = render partial:'fans/artists', collection: @artists[0..2]
+            = render partial:'fans/artist', collection: @artists2
         / /Page2
         .item
           %ul.thumbnails
-            = render partial:'fans/artists', collection: @artists[0..2]
+            = render partial:'fans/artist', collection: @artists3
         / /Page3
       .control-box
         %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"}
