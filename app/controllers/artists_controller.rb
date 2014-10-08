@@ -13,6 +13,14 @@ class ArtistsController < ApplicationController
     end
   end
 
+  def show
+    pledges = Pledge.where(artist_id: params[:id])
+    @total = 0
+    pledges.each do |pledge|
+      @total += pledge.price
+    end
+  end
+
   protected
 
   def artist
