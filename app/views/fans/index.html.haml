@@ -2,25 +2,7 @@
   = image_tag("http://placehold.it/1300x500&text=fanheader")
 %section#featured
   .container
-    %h2 Featured Artist
-    .hr-with-margin
-    %a.featured-image{:href => "profile.html"}
-      %img.main-image{:alt => "", :src => image_path("carter.png")}/
-      %img.featured-badge{:alt => "", :src => image_path("featured-badge.svg")}/
-    %h3 Carter Hulsey
-    %h4 Singer/Songwriter
-    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sem eu turpis vulputate elementum eget ut tellus. Proin id ante congue.
-    %a.button.button-green{:href => "profile.html"} Pledge
-    .stats
-      .stat
-        %h5 71
-        %h6 Fans
-      .stat
-        %h5 114
-        %h6 Followers
-      .stat
-        %h5 $1,450
-        %h6 Permo
+    = render partial: "welcome/featured_artist"
 %section#discover
   %h2 Discover
   .container 
