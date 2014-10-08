@@ -1,0 +1,21 @@
+%h2 Featured Artist
+.hr-with-margin
+%a.featured-image{:href => "profile.html"}
+  %img.main-image{:alt => "", :src => image_path(@featured_artist.image(:medium))}/
+  %img.featured-badge{:alt => "", :src => image_path("featured-badge.svg")}/
+%h3= @featured_artist.name
+%h4= @featured_artist.genre
+%p= @featured_artist.about_me
+%a.button.button-green{:href => artist_path(@featured_artist.id)} Pledge
+.stats
+  .stat
+    %h5= @featured_artist.pledges.count
+    %h6 Fans
+  .stat
+    %h5 22
+    %h6 Followers
+  .stat
+    %h5= number_to_currency(@total, precision: 0)
+    %h6 Permo
+
+
