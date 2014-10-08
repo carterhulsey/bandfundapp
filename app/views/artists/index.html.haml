@@ -22,5 +22,4 @@
         = link_to "Log Out", destroy_artist_session_path, method: :delete
 
 .dashboard
-
-  %h3 Welcome to your dashboard.
+  = render partial: "profile"
