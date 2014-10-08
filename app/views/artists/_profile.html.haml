@@ -5,10 +5,11 @@
   .row
     .small-12.columns
       .well
-        = form_for(current_artist, url: artist_registration_path, method: 'PUT', id: "my-awesome-dropzone.dropzone") do |form|
+        = form_for(current_artist, url: artist_registration_path, html: {multipart: true, method: :put, class: :dropzone, id: 'photo-dropzone'}) do |form|
+          = form.hidden_field :image
           .row
             .small-4.columns
-              %input#photo-dropzone{:name => "file", :type => "file"}/
+              %input#photo-dropzone{:name => "image", :type => "file"}/
             .small-8.columns
               .row
                 .small-12.columns
