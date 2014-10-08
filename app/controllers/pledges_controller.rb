@@ -24,10 +24,10 @@ class PledgesController < ApplicationController
       customer = Stripe::Customer.create(
         {:card => token,
         :description => current_fan.email
-        })
+        }, ENV['STRIPE_SECRET']
+      )
       current_fan.update_attributes(:stripe_id => customer.id)
     end
-
     customer_token = Stripe::Token.create(
       {:customer => current_fan.stripe_id},
       @artist.access_token # user's access token from the Stripe Connect flow
