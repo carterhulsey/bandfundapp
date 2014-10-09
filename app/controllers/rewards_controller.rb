@@ -33,6 +33,12 @@ class RewardsController < ApplicationController
     end
   end
 
+  def destroy
+    @reward = Reward.find_by(id: params[:id])
+    @reward.destroy
+    redirect_to artists_path
+  end
+
   protected
 
   def reward_params
