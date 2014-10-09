@@ -6,7 +6,7 @@ class Artist < ActiveRecord::Base
 
   has_attached_file :image, 
     :styles => { :medium => ["450x300>", :jpg], :thumb => ["100x100>", :jpg] }, 
-    :default_url => lambda { |image| ActionController::Base.helpers.asset_path('carter.png') }
+    :default_url => '/carter.png' 
 
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
