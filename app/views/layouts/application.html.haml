@@ -103,5 +103,9 @@
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", :type => "text/javascript"}
     %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"}
     :javascript
+      tinyMCE.init({
+        selector: 'textarea.editor'
+      });
+    :javascript
       $(document).foundation();
     = yield(:page_javascript)
