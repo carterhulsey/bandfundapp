@@ -13,7 +13,6 @@
  *= require foundation.min
  *= require normalize
  *= require bootstrap-carousel
- *= require dropzone/basic
  *= require bootstrap-modal
  *= require custom
  */
