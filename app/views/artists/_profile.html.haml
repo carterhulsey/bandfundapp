@@ -6,7 +6,6 @@
     .small-12.columns
       .well
         = form_for(current_artist, url: artist_registration_path, html: {multipart: true, method: :put}) do |form|
-          = form.hidden_field :image
           .row
             .small-4.columns
               %input#photo-dropzone{:name => "artist[image]", :type => "file"}/
