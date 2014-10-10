@@ -1,114 +1,111 @@
 .container
-%section#checkout-form
-  = form_tag("/rewards/#{@reward.id}/pledges",method: 'POST', id: "payment-form") do 
-    .row
-      #checkout-form.small-8.columns
-        .row
-          #name-form.small-12.columns
-            .row
-              .small-6.columns
-                %label{:for => "First_Name"} First Name
-                %input{:name => "First_Name", :placeholder => "John", :type => "text"}/
-              .small-6.columns
-                %label{:for => "Last_Name"} Last Name
-                %input{:name => "Last_Name", :placeholder => "Smith", :type => "text"}/
-            .row
-              .small-12.columns
-                %label{:for => "Email"} Email
-                %input{:name => "Email", :placeholder => "fan@bandfund.com", :type => "text"}/
-          #address-info.small-12.columns
-            .row
-              .small-12.columns
-                %label{:for => "Address1"} Address 1
-                %input{:name => "Address1", :placeholder => "123 Street", :type => "text"}/
-            .row
-              .small-12.columns
-                %label{:for => "Address2"} Address 2
-                %input{:name => "Address2", :placeholder => "Apartment/Suite", :type => "text"}/
-            .row
-              .small-6.columns
-                %label{:for => "City"} City
-                %input{:name => "City", :placeholder => "Joplin", :type => "text"}/
-              .small-6.columns
-                %label{:for => "State"} State
-                %input{:name => "State", :placeholder => "Missouri", :type => "text"}/
-            .row
-              .small-6.columns
-                %label{:for => "ZIP"} ZIP
-                %input{:name => "ZIP", :placeholder => "64804", :type => "text"}/
-              .small-6.columns
-                %label{:for => "Country"} Country
-                %input{:name => "Country", :placeholder => "USA", :type => "text"}/
-          #billing-info.small-12.columns
-            .row
-              .small-6.columns
-                %label{:for => "Credit Card Number"} Credit Card Number
-                %input{"data-stripe" => "number", :size => "20", :type => "text"}/
-              .small-3.columns
-                %label{:for => "Month"} Month
-                %input{"data-stripe" => "exp-month", :size => "2", :type => "text"}/
-              .small-3.columns
-                %label{:for => "Year"} Year
-                %input{"data-stripe" => "exp-year", :size => "4", :type => "text"}/
-            .row
-              .small-6.columns
-                %label{:for => "Security Code"} Security Code
-                %input{"data-stripe" => "cvc", :size => "4", :type => "text"}/
-              .small-6.columns
-                %label{:for => "Billing ZIP"} Billing ZIP
-                %input{:name => "Billing ZIP", :placeholder => "64804", :type => "text"}/                
-      / Form Side
-      #checkout-info.small-4.columns
-        / Info Side
-        %img#cards-image{:alt => "", :src => image_path("cards.svg")}/
-        .hr-with-margin
-          = render partial:'/artists/reward', pledge: true, collection: @artist.rewards, locals: {pledge: false, edit: false, new_pledge: true}
-      / row
-      .row.pad-top
-        .small-12.columns
-          = submit_tag "Submit", class: "button button-green"
+  %section#checkout-form
+    = form_tag("/rewards/#{@reward.id}/pledges",method: 'POST', id: "payment-form") do 
+      .row
+        #checkout-form.small-8.columns
+          .row
+            #name-form.small-12.columns
+              .row
+                .small-6.columns
+                  %label{:for => "First_Name"} First Name
+                  %input{:name => "First_Name", :placeholder => "John", :type => "text"}/
+                .small-6.columns
+                  %label{:for => "Last_Name"} Last Name
+                  %input{:name => "Last_Name", :placeholder => "Smith", :type => "text"}/
+              .row
+                .small-12.columns
+                  %label{:for => "Email"} Email
+                  %input{:name => "Email", :placeholder => "fan@bandfund.com", :type => "text"}/
+            #address-info.small-12.columns
+              .row
+                .small-12.columns
+                  %label{:for => "Address1"} Address 1
+                  %input{:name => "Address1", :placeholder => "123 Street", :type => "text"}/
+              .row
+                .small-12.columns
+                  %label{:for => "Address2"} Address 2
+                  %input{:name => "Address2", :placeholder => "Apartment/Suite", :type => "text"}/
+              .row
+                .small-6.columns
+                  %label{:for => "City"} City
+                  %input{:name => "City", :placeholder => "Joplin", :type => "text"}/
+                .small-6.columns
+                  %label{:for => "State"} State
+                  %input{:name => "State", :placeholder => "Missouri", :type => "text"}/
+              .row
+                .small-6.columns
+                  %label{:for => "ZIP"} ZIP
+                  %input{:name => "ZIP", :placeholder => "64804", :type => "text"}/
+                .small-6.columns
+                  %label{:for => "Country"} Country
+                  %input{:name => "Country", :placeholder => "USA", :type => "text"}/
+            #billing-info.small-12.columns
+              .row
+                .small-6.columns
+                  %label{:for => "Credit Card Number"} Credit Card Number
+                  %input{"data-stripe" => "number", :size => "20", :type => "text"}/
+                .small-3.columns
+                  %label{:for => "Month"} Month
+                  %input{"data-stripe" => "exp-month", :size => "2", :type => "text"}/
+                .small-3.columns
+                  %label{:for => "Year"} Year
+                  %input{"data-stripe" => "exp-year", :size => "4", :type => "text"}/
+              .row
+                .small-6.columns
+                  %label{:for => "Security Code"} Security Code
+                  %input{"data-stripe" => "cvc", :size => "4", :type => "text"}/
+                .small-6.columns
+                  %label{:for => "Billing ZIP"} Billing ZIP
+                  %input{:name => "Billing ZIP", :placeholder => "64804", :type => "text"}/                
+        / Form Side
+        #checkout-info.small-4.columns
+          / Info Side
+          %img#cards-image{:alt => "", :src => image_path("cards.svg")}/
+          .hr-with-margin
+            = render partial:'/artists/reward', pledge: true, collection: @artist.rewards, locals: {pledge: false, edit: false, new_pledge: true}
+        / row
+        .row.pad-top
+          .small-12.columns
+            = submit_tag "Submit", class: "button button-green"
+
 %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", :type => "text/javascript"}
 :javascript
-      $(document).ready(function() {
-            // This identifies your website in the createToken call below
-      Stripe.setPublishableKey('#{ENV["STRIPE_PUBLISHABLE_KEY"]}');
+  $(document).ready(function() {
+        // This identifies your website in the createToken call below
+  Stripe.setPublishableKey('#{ENV["STRIPE_PUBLISHABLE_KEY"]}');
 
-      var stripeResponseHandler = function(status, response) {
-        var $form = $('#payment-form');
+  var stripeResponseHandler = function(status, response) {
+    var $form = $('#payment-form');
 
-        if (response.error) {
-          // Show the errors on the form
-          $form.find('.payment-errors').text(response.error.message);
-          $form.find('button').prop('disabled', false);
-        } else {
-          // token contains id, last4, and card type
-          var token = response.id;
-          // Insert the token into the form so it gets submitted to the server
-          $form.append($('<input type="hidden" name="stripeToken" />').val(token));
-          // and re-submit
-          $form.get(0).submit();
-        }
-      };
+    if (response.error) {
+      // Show the errors on the form
+      $form.find('.payment-errors').text(response.error.message);
+      $form.find('button').prop('disabled', false);
+    } else {
+      // token contains id, last4, and card type
+      var token = response.id;
+      // Insert the token into the form so it gets submitted to the server
+      $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+      // and re-submit
+      $form.get(0).submit();
+    }
+  };
 
-      $(document).ready(function() {
-        $('#payment-form').submit(function(e) {
-        var $form = $(this);
+  $(document).ready(function() {
+    $('#payment-form').submit(function(e) {
+    var $form = $(this);
 
-        // Disable the submit button to prevent repeated clicks
-        $form.find('button').prop('disabled', true);
+    // Disable the submit button to prevent repeated clicks
+    $form.find('button').prop('disabled', true);
 
-        Stripe.card.createToken($form, stripeResponseHandler);
+    Stripe.card.createToken($form, stripeResponseHandler);
 
-        // Prevent the form from submitting with the default action
-        return false;
-        });
-      });
-
-
+    // Prevent the form from submitting with the default action
+    return false;
+    });
+  });
 
 
-      })
-     
 
 
-     
+  })
