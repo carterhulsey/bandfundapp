@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   end
 
   resources :artists, only: [:show, :index] do
-    resources :rewards, only: [:new, :create, :update, :index , :edit]
+    resources :rewards, only: [:new, :create, :update, :index , :edit, :destroy]
     resources :pledges, only: [:show, :new, :create]
   end
   root "welcome#index"

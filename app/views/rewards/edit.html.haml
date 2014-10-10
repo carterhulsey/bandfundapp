@@ -12,3 +12,5 @@
     = form.label :address_required, "Require Address?"
     = form.check_box :address_required
   = submit_tag
+  %br
+  = link_to "Delete Reward", artist_reward_path(current_artist, params[:id]), data: { method: "delete"}
