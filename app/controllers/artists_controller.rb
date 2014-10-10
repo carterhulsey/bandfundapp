@@ -1,8 +1,9 @@
 class ArtistsController < ApplicationController
   helper_method :artist
   respond_to :js
-
+  
   def index
+    @reward = Reward.new
     if !current_artist
       redirect_to root_url
     else
