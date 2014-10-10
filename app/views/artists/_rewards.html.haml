@@ -7,6 +7,17 @@
         %h5 Please sign up with stripe to create rewards.
         = link_to "Connect with Stripe",{view: :dashboard_payments}, remote: true
       - else
-        %a.button.button-clear-green{:href => new_artist_reward_path(current_artist)} Add Reward
+        #partial
+          %a.button.button-clear-green{"data-target" => "#myModal", "data-toggle" => "modal"} Add Reward
   .row
     = render partial:'reward', collection: current_artist.rewards, locals: {pledge: false, edit: true, new_pledge: false}
+
+ 
+  #myModal.modal.bs-example-modal-sm{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-body
+          %center
+            = render partial: "rewards/form"
+        .modal-footer
+          %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close

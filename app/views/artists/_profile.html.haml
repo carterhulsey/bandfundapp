@@ -5,8 +5,7 @@
   .row
     .small-12.columns
       .well
-        = form_for(current_artist, url: artist_registration_path, html: {multipart: true, method: :put, class: :dropzone, id: 'photo-dropzone'}) do |form|
-          = form.hidden_field :image
+        = form_for(current_artist, url: artist_registration_path, html: {multipart: true, method: :put}) do |form|
           .row
             .small-4.columns
               %input#photo-dropzone{:name => "artist[image]", :type => "file"}/
@@ -57,6 +56,3 @@
         }
     }
     
-    $("#photo-dropzone").change(function(){
-        readURL(this);
-    });

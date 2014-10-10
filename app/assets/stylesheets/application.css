@@ -13,5 +13,6 @@
  *= require foundation.min
  *= require normalize
  *= require bootstrap-carousel
+ *= require bootstrap-modal
  *= require custom
  */
