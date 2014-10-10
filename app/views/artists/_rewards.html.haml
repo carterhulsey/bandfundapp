@@ -4,7 +4,8 @@
       %h2 Your Rewards
     .small-10.columns
       - if current_artist.access_token == nil
-        %a.button.button-clear-green{"data-target" => "#myModal", "data-toggle" => "modal"} Add Reward
+        %h5 Please sign up with stripe to create rewards.
+        = link_to "Connect with Stripe",{view: :dashboard_payments}, remote: true
       - else
         #partial
           %a.button.button-clear-green{"data-target" => "#myModal", "data-toggle" => "modal"} Add Reward
