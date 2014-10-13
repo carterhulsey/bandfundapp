@@ -1,14 +1,17 @@
-= form_for @reward, url: artist_rewards_path(current_artist) do |form|
-  %p
-    = form.label :title
-    = form.text_field :title
-  %p
-    = form.label :price, "Price in Dollars"
-    = form.text_field :price
-  %p
-    = form.label :description
-    = form.text_field :description
-  %p
-    = form.label :address_required, "Require Address?"
-    = form.check_box :address_required
-  = submit_tag
+.row
+  .reward
+    = form_for @reward, url: artist_rewards_path(current_artist) do |form|
+      .row
+        .small-12.columns
+          = form.label :title
+          = form.text_field :title
+        .small-12.columns
+          = form.label :description
+          = form.text_area :description, :size => "63x3"
+        .small-12.columns
+          = form.label :price
+          = form.text_field :price
+        .small-12.columns
+          = form.label :address_required, "Require Address?"
+          = form.check_box :address_required
+      = submit_tag "Submit", class: "button button-green"
