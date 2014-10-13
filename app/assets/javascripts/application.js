@@ -21,3 +21,4 @@
 //= require vendor/placeholder
 //= require social-share-button
 //= require app
+//= require_tree .
