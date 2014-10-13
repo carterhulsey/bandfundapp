@@ -11,6 +11,10 @@ $ heroku run rake featured ID=<id of artist>
   
 TEST ACCOUNTS:
 * Facebook:
+* Development:
   ksprlqq_qinberg_1412096949@tfbnw.net / password
   ypbgcvs_liescu_1412095770@tfbnw.net / password
+* Staging:
+  maria_phusobi_greeneman@tfbnw.net / password
+  dave_xmqmqdo_panditescu@tfbnw.net / password
 
