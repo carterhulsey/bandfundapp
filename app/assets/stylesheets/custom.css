@@ -997,3 +997,15 @@ section#profile-editor {
 .regular-sign-in {
     display: none;
 }
+
+
+.reward input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
