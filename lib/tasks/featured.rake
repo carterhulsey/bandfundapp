@@ -1,4 +1,5 @@
-desc "Removes old featured artist and replaces it with new" do
+namespace :artist do
+  desc "Removes old featured artist and replaces it with new"
   task :featured => :environment do
     puts "Removing old featured artist"
     artist = Artist.all.find_by(featured: true)
