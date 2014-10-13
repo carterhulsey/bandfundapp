@@ -102,9 +102,10 @@
     = javascript_include_tag "application" 
     %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"}       
     :javascript
-      tinyMCE.init({
-        selector: 'textarea.editor'
+      $(document).ready(function() {
+        tinyMCE.init({
+          selector: 'textarea.editor'
+        });
+        $(document).foundation();
       });
-    :javascript
-      $(document).foundation();
     = yield(:page_javascript)

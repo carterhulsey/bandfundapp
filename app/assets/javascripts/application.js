@@ -12,11 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require vendor/modernizr
 //= require bootstrap.min
 //= require foundation.min
 //= require tinymce
+//= require vendor/fastclick
+//= require vendor/jquery.cookie
+//= require vendor/placeholder
 //= require app
-//= require_tree .
-
