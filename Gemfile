@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem "better_errors", group: :development
 gem "binding_of_caller"
-gem 'social-share-button'
+gem 'social-share-button', ref: '1f95d81', github: 'vrybas/social-share-button'
 gem 'omniauth-stripe-connect'
 gem 'stripe'
 gem 'paperclip', '~> 4.2'

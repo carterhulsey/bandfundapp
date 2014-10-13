@@ -19,4 +19,5 @@
 //= require vendor/fastclick
 //= require vendor/jquery.cookie
 //= require vendor/placeholder
+//= require social-share-button
 //= require app
