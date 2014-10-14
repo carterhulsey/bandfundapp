@@ -10,6 +10,10 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def auth_users
+    fan_signed_in? || artist_signed_in?
+  end
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :name, :about_me, :paypal_link, :genre_id, :city, :state, :website_url) }
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:email, :current_password, :password, :password_confirmation, :name, :about_me, :paypal_link, :genre_id, :city, :state, :website_url, :video_url, :image, :itunes_url) }
