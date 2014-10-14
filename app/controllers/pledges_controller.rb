@@ -7,6 +7,10 @@ class PledgesController < ApplicationController
     if !current_fan 
       render "sign_up"
     end
+
+    if @reward.address_required == true
+      render "address_required"
+    end
   end
 
   def show
@@ -18,7 +22,7 @@ class PledgesController < ApplicationController
     @reward = Reward.find_by(:id => params[:reward_id])
     @artist = Artist.find_by(:id => @reward.artist_id)
     
-    # Checks to see if fan has already set up a subscription
+    Checks to see if fan has already set up a subscription
     if current_fan.stripe_id == nil
     # Saves customer object into our stripe account, so we can save credit card information
       customer = Stripe::Customer.create(
@@ -41,13 +45,18 @@ class PledgesController < ApplicationController
         }, @artist.access_token
       )
     
-    
-   @pledge = Pledge.create(artist_id: @artist.id, fan_id: current_fan.id, plan: @reward.title, price: @reward.price, email: params[:Email], address1: params[:Address1], address2: params[:Address2], city: params[:City], state: params[:State], zip: params[:ZIP], country: params[:Country], first_name: params[:First_Name], last_name: params[:Last_Name], reward_id: @reward.id)
+    current_fan.update_attributes(address_1: params[:Address1], address_2: params[:Address2], city: params[:City], state: params[:State], zip_code: params[:ZIP], country: params[:Country])
+
+    if @reward.address_required == true
+      @pledge = Pledge.create(artist_id: @artist.id, fan_id: current_fan.id, plan: @reward.title, price: @reward.price, email: params[:Email], address1: params[:Shipping_Address1], address2: params[:Shipping_Address2], city: params[:Shipping_City], state: params[:Shipping_State], zip: params[:Shipping_ZIP], country: params[:Shipping_Country], first_name: params[:First_Name], last_name: params[:Last_Name], reward_id: @reward.id)
+    else
+      @pledge = Pledge.create(artist_id: @artist.id, fan_id: current_fan.id, plan: @reward.title, price: @reward.price, email: params[:Email],  first_name: params[:First_Name], last_name: params[:Last_Name], reward_id: @reward.id)
+    end
     if @pledge.save
       ArtistPledge.create(pledge_id: @pledge.id, artist_id: @pledge.artist_id, price: @reward.price)
       redirect_to artist_path(@pledge.artist_id)
     else
-      render "new"
+      render "new" 
     end
   end
 

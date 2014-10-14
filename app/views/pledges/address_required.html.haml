@@ -40,6 +40,30 @@
                 .small-6.columns
                   %label{:for => "Country"} Country
                   %input{:name => "Country", :placeholder => "USA", :type => "text"}/
+            #address-info.small-12.columns
+              %h4 Shipping Address
+              .row
+                .small-12.columns
+                  %label{:for => "Shipping_Address1"} Address 1
+                  %input{:name => "Shipping_Address1", :placeholder => "123 Street", :type => "text"}/
+              .row
+                .small-12.columns
+                  %label{:for => "Shipping_Address2"} Address 2
+                  %input{:name => "Shipping_Address2", :placeholder => "Apartment/Suite", :type => "text"}/
+              .row
+                .small-6.columns
+                  %label{:for => "Shipping_City"} City
+                  %input{:name => "Shipping_City", :placeholder => "Joplin", :type => "text"}/
+                .small-6.columns
+                  %label{:for => "Shipping_State"} State
+                  %input{:name => "Shipping_State", :placeholder => "Missouri", :type => "text"}/
+              .row
+                .small-6.columns
+                  %label{:for => "Shipping_ZIP"} ZIP
+                  %input{:name => "Shipping_ZIP", :placeholder => "64804", :type => "text"}/
+                .small-6.columns
+                  %label{:for => "Shipping_Country"} Country
+                  %input{:name => "Shipping_Country", :placeholder => "USA", :type => "text"}/
             #billing-info.small-12.columns
               .row
                 .small-6.columns
@@ -57,7 +81,7 @@
                   %input{"data-stripe" => "cvc", :size => "4", :type => "text"}/
                 .small-6.columns
                   %label{:for => "Billing ZIP"} Billing ZIP
-                  %input{:name => "Billing ZIP", :placeholder => "64804", :type => "text"}/  
+                  %input{:name => "Billing ZIP", :placeholder => "64804", :type => "text"}/                
         / Form Side
         #checkout-info.small-4.columns
           / Info Side
