@@ -1,4 +1,6 @@
 class RewardsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @rewards = Reward.where(:artist_id => params[:artist_id])
     @artist = Artist.find_by(:id => params[:artist_id])

@@ -1,4 +1,6 @@
 class PledgesController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @pledge = Pledge.new
     @reward = Reward.find_by(:id => params[:reward_id])
