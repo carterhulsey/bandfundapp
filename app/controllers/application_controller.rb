@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def auth_users
+  def auth_users!
     fan_signed_in? || artist_signed_in?
   end
 
