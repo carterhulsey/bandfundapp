@@ -1,48 +1,4 @@
-# BandFundApp
-
-### About
-## Project Setup
-
-_How do I, as a developer, start working on the project?_ 
-
-1. Facebook
-
-  Login
-  Logout
-
-2. Stripe
-
-  Fans can pay via Stripe with their Credit Card.  They will enter their credit card information first, 
-  and subsequent times they will be able to just click the 'Pledge' button
-
-  Artists are required to connect their Stripe account to their BandFundApp account 
-  before they are able to create Rewards for htheir fans
-
-3. S3 ($)
-  When an Artist uploads a profile photo this is where it is stored
-
-
-## Setting the featured artist
-
-$ heroku run rake featured ID=<id of artist>
-
-### Architecture
-
-* Facebook
-  
-TEST ACCOUNTS:
-* Facebook:
-* Development:
-  ksprlqq_qinberg_1412096949@tfbnw.net / password
-  ypbgcvs_liescu_1412095770@tfbnw.net / password
-* Staging:
-  maria_phusobi_greeneman@tfbnw.net / password
-  dave_xmqmqdo_panditescu@tfbnw.net / password
-
-
-
-
-# _Project_
+# _BandFundApp_
 
 _Bandfundapp helps musicians connect with their fans more easily and provides a platform for the fans to fund the musicians to fous on their music and not have to worry about working to pay the bills._
 
@@ -58,7 +14,23 @@ _Bandfundapp helps musicians connect with their fans more easily and provides a 
 ### Third Party
 
 1. Facebook: _create a facebook app, put those keys in the .env file_
-1. Stripe: _create a Stripe app, put those keys in the .env file_
+  Test Accounts
+  * Development:
+    ksprlqq_qinberg_1412096949@tfbnw.net / password
+    ypbgcvs_liescu_1412095770@tfbnw.net / password
+  * Staging:
+    maria_phusobi_greeneman@tfbnw.net / password
+    dave_xmqmqdo_panditescu@tfbnw.net / password
+1. Stripe: 
+
+  _create a Stripe app, put those keys in the .env file_
+
+  Fans can pay via Stripe with their Credit Card.  They will enter their credit card information first, 
+  and subsequent times they will be able to just click the 'Pledge' button
+
+  Artists are required to connect their Stripe account to their BandFundApp account 
+  before they are able to create Rewards for htheir fans
+
 1. S3: _create a bucket, put those keys in the .env file_
 
 ## Deploying
