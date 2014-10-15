@@ -4,8 +4,8 @@
   %img.main-image{:alt => "", :src => image_path(@featured_artist.image(:medium))}/
   %img.featured-badge{:alt => "", :src => image_path("featured-badge.svg")}/
 %h3= @featured_artist.name
-%h4= @featured_artist.genre
-%p= @featured_artist.about_me.html_safe
+-# %h4= @featured_artist.genre
+%p= artist.about_me[0...100].html_safe unless artist.about_me == nil
 %a.button.button-green{:href => artist_path(@featured_artist.id)} Pledge
 .stats
   .stat
