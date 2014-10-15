@@ -1,6 +1,6 @@
 %h2 Featured Artist
 .hr-with-margin
-%a.featured-image{:href => "profile.html"}
+%a.featured-image{:href => artist_path(@featured_artist.id)}
   %img.main-image{:alt => "", :src => image_path(@featured_artist.image(:medium))}/
   %img.featured-badge{:alt => "", :src => image_path("featured-badge.svg")}/
 %h3= @featured_artist.name
