@@ -8,7 +8,7 @@
         .video
           - if artist.video_url == nil || artist.video_url == ""
             = image_tag(artist.image.url(:profile), size: "610x457.5")
-          - else 
+          - else
             = raw YouTubeAddy.youtube_embed_url(artist.video_url,610,457.5)
         / small-8
       .small-4.columns
@@ -16,12 +16,12 @@
           .stat
             %h5= artist.pledges.count
             %h6 Fans
-          .hr
-          .stat
+          -# .hr
+          -# .stat
             %h5= artist.number_of_followers
             %h6 Followers
-          .hr
-          .stat
+          -# .hr
+          -# .stat
             %h5= number_to_currency(@total, precision: 0)
             %h6 Permo
         / stats
