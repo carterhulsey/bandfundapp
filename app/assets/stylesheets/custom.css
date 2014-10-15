@@ -271,7 +271,7 @@ section#cta {
     height: 500px;
     position: relative;
     width: 100vw;
-    background-image: url('/assets/images/cta-bg.png');
+    background-image: url('../images/cta-bg.png');
     background-size: cover;
     background-position: center;
     overflow: hidden !important;
