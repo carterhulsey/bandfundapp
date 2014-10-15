@@ -4,5 +4,5 @@
   .caption
     %h3= artist.name
     %h4= artist.genre
-    %p= artist.about_me[0...100].html_safe unless artist.about_me == nil
+    -# %p= artist.about_me[0...100].html_safe unless artist.about_me == nil
     %a.button.button-green{:href => artist_path(artist.id)} Pledge
