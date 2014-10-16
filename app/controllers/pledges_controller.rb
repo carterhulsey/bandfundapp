@@ -1,5 +1,5 @@
 class PledgesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_artist!, only: [:edit, :update]
 
   def new
     @pledge = Pledge.new
