@@ -1,5 +1,5 @@
 class RewardsController < ApplicationController
-  before_action :auth_users
+  before_action :auth_users!
 
 
   def index
