@@ -1,5 +1,5 @@
 class PledgesController < ApplicationController
-  before_action :auth_users!
+  before_action :authenticate_user!
 
   def new
     @pledge = Pledge.new
