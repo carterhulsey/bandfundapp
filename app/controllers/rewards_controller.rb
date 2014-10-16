@@ -1,5 +1,5 @@
 class RewardsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_artist!, only: [:edit, :update]
 
   def index
     @rewards = Reward.where(:artist_id => params[:artist_id])
