@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  before_action :auth_users!, except: :index
+  before_action :authenticate_user!, except: :index
 
   helper_method :artist
   respond_to :js
