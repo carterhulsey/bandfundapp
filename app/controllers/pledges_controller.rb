@@ -20,15 +20,14 @@ class PledgesController < ApplicationController
 
   def create
     stripe = params
-    token = params[:stripeToken]
     @reward = Reward.find_by(:id => params[:reward_id])
     @artist = Artist.find_by(:id => @reward.artist_id)
     
-    Checks to see if fan has already set up a subscription
+    # Checks to see if fan has already set up a subscription
     if current_fan.stripe_id == nil
     # Saves customer object into our stripe account, so we can save credit card information
       customer = Stripe::Customer.create(
-        {:card => token,
+        {:card => params[:stripeToken],
         :description => current_fan.email
         }, ENV['STRIPE_SECRET']
       )

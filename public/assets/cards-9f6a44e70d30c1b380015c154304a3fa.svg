@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 158 20" enable-background="new 0 0 158 20" xml:space="preserve">
+<g>
+	<path fill="#CFCECE" d="M2,0l31,0c1.1,0,2,0.9,2,2v16c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2L0,2C0,0.9,0.9,0,2,0z"/>
+	<path fill="#627CBD" d="M2,0l31,0c1.1,0,2,0.9,2,2v2.7H0L0,2C0,0.9,0.9,0,2,0z"/>
+	<path fill="#ECBF5D" d="M0,15.3h35V18c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2L0,15.3z"/>
+</g>
+<g>
+	<path fill="#CFCECE" d="M43,0l31,0c1.1,0,2,0.9,2,2v16c0,1.1-0.9,2-2,2H43c-1.1,0-2-0.9-2-2V2C41,0.9,41.9,0,43,0z"/>
+	<circle fill="#EA5E5E" cx="62.4" cy="10" r="5.9"/>
+	<circle fill="#ECBF5D" cx="54.6" cy="10" r="5.9"/>
+</g>
+<g>
+	<path fill="#CFCECE" d="M125,0l31,0c1.1,0,2,0.9,2,2v16c0,1.1-0.9,2-2,2h-31c-1.1,0-2-0.9-2-2V2C123,0.9,123.9,0,125,0z"/>
+	<rect x="135.6" y="5.1" fill="#58A6DB" width="9.8" height="9.8"/>
+</g>
+<g>
+	<path fill="#CFCECE" d="M84,0l31,0c1.1,0,2,0.9,2,2v16c0,1.1-0.9,2-2,2H84c-1.1,0-2-0.9-2-2V2C82,0.9,82.9,0,84,0z"/>
+	<text transform="matrix(1 0 0 1 87.0156 11.8381)" fill="#D2962A" font-family="'BrandonGrotesque-Bold'" font-size="5">DISCOVER</text>
+	<path fill="#D2962A" d="M97.1,20H115c1.1,0,2-0.9,2-2v-6.2C117,19.7,97.1,20,97.1,20z"/>
+	<circle fill="#D2962A" cx="100.5" cy="10.2" r="1.6"/>
+</g>
+</svg>

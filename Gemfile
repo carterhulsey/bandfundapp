@@ -15,12 +15,14 @@ gem "better_errors", group: :development
 gem "binding_of_caller"
 gem 'social-share-button', ref: '1f95d81', github: 'vrybas/social-share-button'
 gem 'omniauth-stripe-connect'
+gem 'omniauth'
 gem 'stripe'
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
 gem 'cocaine'
 gem 'tinymce-rails'
 gem 'youtube_addy'
+gem 'ckeditor'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.3'
@@ -30,4 +32,12 @@ end
 
 group :production, :staging do
   gem 'rails_12factor'
+end
+
+group :developoment, :test do 
+  gem 'rspec-rails', '~> 3.1.0'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'pry'
 end

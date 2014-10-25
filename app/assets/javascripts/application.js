@@ -16,9 +16,11 @@
 //= require bootstrap.min
 //= require foundation.min
 //= require tinymce
+//= require ckeditor/init
 //= require vendor/fastclick
 //= require vendor/jquery.cookie
 //= require vendor/placeholder
 //= require social-share-button
 //= require app
+//= require stripe-form
 //= require_tree .
