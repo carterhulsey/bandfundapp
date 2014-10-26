@@ -34,7 +34,7 @@ group :production, :staging do
   gem 'rails_12factor'
 end
 
-group :developoment, :test do 
+group :development, :test do 
   gem 'rspec-rails', '~> 3.1.0'
   gem 'capybara'
   gem 'selenium-webdriver'
