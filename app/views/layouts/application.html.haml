@@ -101,11 +101,6 @@
           %a{:href => "#"} Privacy Policy
     = javascript_include_tag "application"
     %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"}
-    :javascript
-      $(document).ready(function() {
-        tinyMCE.init({
-          selector: 'textarea.editor'
-        });
-        $(document).foundation();
-      });
     = yield(:page_javascript)
+    :javascript
+      $(document).foundation();

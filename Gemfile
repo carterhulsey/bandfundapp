@@ -20,7 +20,6 @@ gem 'stripe'
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
 gem 'cocaine'
-gem 'tinymce-rails'
 gem 'youtube_addy'
 gem 'ckeditor'
 
