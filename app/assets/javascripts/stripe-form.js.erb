@@ -1,6 +1,6 @@
 $(document).ready(function() {
       // This identifies your website in the createToken call below
-      Stripe.setPublishableKey('pk_test_YStIP55lyAkrdDbhp1fUUCl3');
+      Stripe.setPublishableKey('<%= ENV["STRIPE_PUBLISHABLE_KEY"] %>');
       var stripeResponseHandler = function(status, response) {
         var $form = $('#payment-form');
    
