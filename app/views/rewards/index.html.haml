@@ -8,4 +8,4 @@
           %h5= reward.title
           %h5= reward.description
           %h5= reward.price
-          %a.button.button-green{:href => new_reward_pledge_path(reward.id)} Pledge
+          %a.button.button-green{:href => new_reward_pledge_url(reward.id, protocol: "https")} Pledge

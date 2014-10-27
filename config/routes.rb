@@ -22,7 +22,9 @@ Rails.application.routes.draw do
 
   resources :artists, only: [:show, :index] do
     resources :rewards, only: [:new, :create, :update, :index , :edit, :destroy]
-    resources :pledges, only: [:show, :new, :create]
+    constraints :protocol => "https" do 
+      resources :pledges, only: [:show, :new, :create]
+    end
   end
   root "welcome#index"
 end
