@@ -20,4 +20,5 @@
 //= require app
 //= require stripe-form
 //= require ckeditor/init
+//= require ckeditor/config
 //= require foundation.min
