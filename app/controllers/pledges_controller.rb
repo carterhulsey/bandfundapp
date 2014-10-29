@@ -63,6 +63,9 @@ class PledgesController < ApplicationController
     rescue Stripe::AuthenticationError => e
       @stripe_errors = "Something was wrong with your card: #{e.message}"
       render "new"
+    rescue Stripe::CardError => e
+      @stripe_errors = "Something was wrong with your card: #{e.message}"
+      render "new"
     end
   end
 
