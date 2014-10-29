@@ -8,10 +8,10 @@
               .row
                 .small-6.columns
                   %label{:for => "First_Name"} First Name
-                  %input{:name => "First_Name", :placeholder => "John", :type => "text"}/
+                  %input{:id => "First_Name", :name => "First_Name", :placeholder => "John", :type => "text"}/
                 .small-6.columns
                   %label{:for => "Last_Name"} Last Name
-                  %input{:name => "Last_Name", :placeholder => "Smith", :type => "text"}/
+                  %input{:id => "Last_Name", :name => "Last_Name", :placeholder => "Smith", :type => "text"}/
               .row
                 .small-12.columns
                   %label{:for => "Email"} Email
@@ -43,21 +43,21 @@
             #billing-info.small-12.columns
               .row
                 .small-6.columns
-                  %label{:for => "Credit Card Number"} Credit Card Number
-                  %input{"data-stripe" => "number", :size => "20", :type => "text"}/
+                  %label{:for => "card_number"} Credit Card Number
+                  %input{id: "card_number", "data-stripe" => "number", :size => "20", :type => "text"}/
                 .small-3.columns
-                  %label{:for => "Month"} Month
-                  %input{"data-stripe" => "exp-month", :size => "2", :type => "text"}/
+                  %label{:for => "card_month"} Month
+                  %input{id: "card_month", "data-stripe" => "exp-month", :size => "2", :type => "text"}/
                 .small-3.columns
-                  %label{:for => "Year"} Year
-                  %input{"data-stripe" => "exp-year", :size => "4", :type => "text"}/
+                  %label{:for => "card_year"} Year
+                  %input{id: "card_year", "data-stripe" => "exp-year", :size => "4", :type => "text"}/
               .row
                 .small-6.columns
-                  %label{:for => "Security Code"} Security Code
-                  %input{"data-stripe" => "cvc", :size => "4", :type => "text"}/
+                  %label{:for => "security_code"} Security Code
+                  %input{id: "security_code", "data-stripe" => "cvc", :size => "4", :type => "text"}/
                 .small-6.columns
-                  %label{:for => "Billing ZIP"} Billing ZIP
-                  %input{:name => "Billing ZIP", :placeholder => "64804", :type => "text"}/  
+                  %label{:for => "billing_zip"} Billing ZIP
+                  %input{id: "billing_zip", :name => "Billing ZIP", :placeholder => "64804", :type => "text"}/  
         / Form Side
         #checkout-info.small-4.columns
           / Info Side
@@ -68,4 +68,5 @@
         .row.pad-top
           .small-12.columns
             .payment-errors
+              = @stripe_errors if @stripe_errors
             = submit_tag "Submit", class: "button button-green"
