@@ -6,7 +6,7 @@ class PledgesController < ApplicationController
     @reward = Reward.find(params[:reward_id])
     @artist = Artist.find(@reward.artist.id)
     @rewards = Reward.where(:artist_id => @artist.id)
-    if !current_fan 
+    if !current_fan
       render "sign_up"
     end
 
@@ -23,7 +23,7 @@ class PledgesController < ApplicationController
     token = params[:stripeToken]
     @reward = Reward.find_by(:id => params[:reward_id])
     @artist = Artist.find_by(:id => @reward.artist_id)
-    
+
     Checks to see if fan has already set up a subscription
     if current_fan.stripe_id == nil
     # Saves customer object into our stripe account, so we can save credit card information
@@ -46,7 +46,7 @@ class PledgesController < ApplicationController
         :application_fee_percent => 20 #Percent we take for letting connected accounts use the service
         }, @artist.access_token
       )
-    
+
     current_fan.update_attributes(address_1: params[:Address1], address_2: params[:Address2], city: params[:City], state: params[:State], zip_code: params[:ZIP], country: params[:Country])
 
     if @reward.address_required == true
@@ -58,7 +58,7 @@ class PledgesController < ApplicationController
       ArtistPledge.create(pledge_id: @pledge.id, artist_id: @pledge.artist_id, price: @reward.price)
       redirect_to artist_path(@pledge.artist_id)
     else
-      render "new" 
+      render "new"
     end
   end
 
