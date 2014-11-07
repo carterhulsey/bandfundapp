@@ -71,6 +71,19 @@ _Bandfund helps musicians connect with their fans more easily and provides a pla
 
 - `$ heroku config:push -a <env>`
 
+## Making changes
+
+_In order to keep the site working smoothly, please follow this protocol when pushing changes:_
+
+
+1. Pull most recent version of production `$ git pull production master`
+2. Make your changes
+3. Add your changes to the repo `$ git add .`
+4. Commit your changes `$ git commit`
+5. Push to staging app `$ git push staging master`
+6. Test changes on <http://bandfundapp-staging.heroku.com>
+7. Push to production app `$ git push production master`
+8. Celebrate your accomplishment!
 
 ## Team
 
