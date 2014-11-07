@@ -5,7 +5,7 @@
     - @supporters = Pledge.where(:reward_id => reward.id)
     %h5= @supporters.count
     %p= reward.description
-    %a.button.button-green{:href => new_reward_pledge_path(reward)} Pledge
+    %a.button.button-green{:href => new_reward_pledge_url(reward, protocol: "https")} Pledge
 - if edit
   .small-4.columns
     .reward
@@ -14,7 +14,7 @@
       - @supporters = Pledge.where(:reward_id => reward.id)
       %h5= @supporters.count
       %p= reward.description
-      %a.button.button-green{:href => edit_artist_reward_path(current_artist, reward)} Edit
+      %a.button.button-green{:href => edit_artist_reward_url(current_artist, reward,  protocol: "https")} Edit
 - if new_pledge
   .reward
     %h4== #{number_to_currency(reward.price, precision:0)} Per Month
@@ -22,4 +22,4 @@
     - @supporters = Pledge.where(:reward_id => reward.id)
     %h5= @supporters.count
     %p=  reward.description
-    %a.button.button-green{:href => new_reward_pledge_path(@reward)} Pledge
+    %a.button.button-green{:href => new_reward_pledge_url(@reward, protocol: "https")} Pledge  

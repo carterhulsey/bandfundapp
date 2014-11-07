@@ -4,12 +4,13 @@ _Bandfundapp helps musicians connect with their fans more easily and provides a 
 
 ## Project Setup
 
-1. $ git clone git@github.com:bandfundapp/bandfundapp.git
-2. $ cd bandfundapp
-3. $ cp .env.example .env
-4. $ cp config/database.example.yml config/database.yml
-5. $ rake db:migrate
-6. $ git remote add staging git@heroku.com:bandfundapp-staging.git
+1. `$ git clone git@github.com:bandfundapp/bandfundapp.git`
+2. `$ cd bandfundapp`
+3. `$ cp .env.example .env`
+4. `$ cp config/database.example.yml config/database.yml`
+5. `$ rake db:migrate`
+6. `$ git remote add staging git@heroku.com:bandfundapp-staging.git`
+7. `$ git remote add production git@heroku.com:bandfundapp.git`
 
 ### Third Party
 
@@ -21,14 +22,14 @@ _Bandfundapp helps musicians connect with their fans more easily and provides a 
   * Staging:
     maria_phusobi_greeneman@tfbnw.net / password
     dave_xmqmqdo_panditescu@tfbnw.net / password
-1. Stripe: 
+1. Stripe:
 
   _create a Stripe app, put those keys in the .env file_
 
-  Fans can pay via Stripe with their Credit Card.  They will enter their credit card information first, 
+  Fans can pay via Stripe with their Credit Card.  They will enter their credit card information first,
   and subsequent times they will be able to just click the 'Pledge' button
 
-  Artists are required to connect their Stripe account to their BandFundApp account 
+  Artists are required to connect their Stripe account to their BandFundApp account
   before they are able to create Rewards for htheir fans
 
 1. S3: _create a bucket, put those keys in the .env file_
@@ -49,7 +50,7 @@ _Bandfundapp helps musicians connect with their fans more easily and provides a 
 
 * Production:
 
-  `$ git push heroku master`
+  `$ git push production master`
 
 * Staging:
 
@@ -63,7 +64,7 @@ _Bandfundapp helps musicians connect with their fans more easily and provides a 
   $ heroku run rake artist:featured ID=<id of artist> -a <herokuapp name>
 `
 
-> - Use heroku plugins to use 
+> - Use heroku plugins to use
 `
   $ rails plugins install git://github.com/ddollar/heroku-config.git
   $ heroku config:pull -a <env>
