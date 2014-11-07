@@ -73,4 +73,8 @@ _Bandfundapp helps musicians connect with their fans more easily and provides a 
 
 ## Team
 
+#### Internal
+Scott Fahrig <scott@bandfund.com>
+
+#### External
 Corey Grusden <cgrusden@divergentsoftware.com>
