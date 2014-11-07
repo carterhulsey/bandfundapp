@@ -59,18 +59,14 @@ _Bandfundapp helps musicians connect with their fans more easily and provides a 
 ## Troubleshooting & Useful Tools
 
 > - Set the Featured Artist via commandline
+`$ heroku run rake artist:featured ID=<id of artist> -a <herokuapp name>`
 
-`
-  $ heroku run rake artist:featured ID=<id of artist> -a <herokuapp name>
-`
 
 > - Use heroku plugins to use
+`$ rails plugins install git://github.com/ddollar/heroku-config.git`
+`$ heroku config:pull -a <env>`
+`$ heroku config:push -a <env>`
 
-`
-  $ rails plugins install git://github.com/ddollar/heroku-config.git
-  $ heroku config:pull -a <env>
-  $ heroku config:push -a <env>
-`
 
 ## Team
 
