@@ -82,8 +82,9 @@ _In order to keep the site working smoothly, please follow this protocol when pu
 4. Commit your changes `$ git commit`
 5. Push to staging app `$ git push staging master`
 6. Test changes on <http://bandfundapp-staging.heroku.com>
-7. Push to production app `$ git push production master`
-8. Celebrate your accomplishment!
+7. Push to <https://github.com/smfahrig/bandfundapp> `$ git push`
+8. Push to production app `$ git push production master`
+9. Celebrate your accomplishment!
 
 ## Team
 
