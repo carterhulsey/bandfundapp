@@ -1,6 +1,6 @@
-# _BandFundApp_
+# Bandfund
 
-_Bandfundapp helps musicians connect with their fans more easily and provides a platform for the fans to fund the musicians to fous on their music and not have to worry about working to pay the bills._
+_Bandfund helps musicians connect with their fans more easily and provides a platform for the fans to fund the musicians to focus on their music and not have to worry about working to pay the bills._
 
 ## Project Setup
 
