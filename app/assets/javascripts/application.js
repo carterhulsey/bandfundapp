@@ -13,12 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require vendor/modernizr
-//= require bootstrap.min
-//= require foundation.min
-//= require tinymce
 //= require vendor/fastclick
 //= require vendor/jquery.cookie
 //= require vendor/placeholder
 //= require social-share-button
 //= require app
-//= require_tree .
+//= require stripe-form
+//= require ckeditor/init
+//= require ckeditor/config
+//= require foundation.min
