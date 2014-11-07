@@ -65,6 +65,7 @@ _Bandfundapp helps musicians connect with their fans more easily and provides a 
 `
 
 > - Use heroku plugins to use
+
 `
   $ rails plugins install git://github.com/ddollar/heroku-config.git
   $ heroku config:pull -a <env>
