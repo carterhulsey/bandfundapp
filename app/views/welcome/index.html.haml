@@ -1,14 +1,10 @@
 %section#cta
-  #fan
-    = image_tag "ipod-white.svg"
-    .signup-cta
-      %h2 I am a Fan
-      %a.button.button-clear-white{:href => new_fan_registration_path} Sign Up
-  #artist
-    = image_tag "ipod-grey.svg"
-    .signup-cta
-      %h2 I am an Artist
-      %a.button.button-clear{:href => new_artist_registration_path} Sign Up
+  .row
+    #cta-block.small-12.columns.center
+      %h2 It's finally here
+      %p Bandfund empowers artists to keep creating the music you love and earns fans exclusive rewards they deserve.
+      %a.button.button-green.button-cta.button-cta-green{:href => new_artist_registration_path} Sign Up as an artist
+      %a.button.button-purple.button-cta.button-cta-purple{:href => new_fan_registration_path} Sign Up as a fan
 %section#about
   .container
     .about-info
