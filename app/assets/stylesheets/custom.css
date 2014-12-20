@@ -22,7 +22,7 @@ input#photo-dropzone {
     height: 228px;
     width: 228px;
     background-color: #efefef;
-    background: #efefef url("/images/upload.svg")  no-repeat center center;
+    background: #efefef url("../img/icons/upload.svg") no-repeat center center;
     background-size: 80px;
     text-indent: -9999px;
     color: transparent;
@@ -112,6 +112,30 @@ a.button:hover {
     background-color: #42AA7D;
 }
 
+.button-grey {
+    border: 2px solid #ccc;
+    background-color: #ccc;
+    color: #fff;
+}
+
+.button-grey:hover {
+    border: 2px solid #bbb;
+    background-color: #bbb;
+    color: #fff;
+}
+
+.button-purple {
+    border: 2px solid #947B9B;
+    background-color: #947B9B;
+    color: #fff;
+}
+
+.button-purple:hover {
+    border: 2px solid #AF88BA;
+    background-color: #AF88BA;
+    color: #fff;
+}
+
 .button-clear {
     border: 2px solid #999;
     color: #999;
@@ -157,6 +181,12 @@ a.button:hover {
     background-color: #5173af;
 }
 
+.button-stripe {
+    background-color: #00afe1;
+    color: #fff;
+    border: 1px solid #0087AD;
+}
+
 submit.button.button-green {
     padding: 10px 20px;
     border-radius: 5px;
@@ -164,6 +194,20 @@ submit.button.button-green {
     transition: all .1s ease-in-out;
    -moz-transition: all .1s ease-in-out;
    -webkit-transition: all .1s ease-in-out;
+}
+
+.button-cta {
+    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+    margin: 0px 20px;
+}
+
+.button-cta-green {
+    box-shadow: 0px 3px 0px 0px #33775A;
+}
+
+.button-cta-purple {
+    box-shadow: 0px 3px 0px 0px #443449;
 }
 
 /* Tables for some reason */
@@ -200,7 +244,7 @@ header {
     z-index: 10;
 }
 
-header .logo img {
+header .logo svg {
     margin-top: 20px;
     float: left;
 }
@@ -271,14 +315,17 @@ section#cta {
     height: 500px;
     position: relative;
     width: 100vw;
-    background-image: url('../images/cta-bg.png');
+    background-image: url('../img/carter.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden !important;
+    text-align: center;
+    color: #fff;
+
 }
 
 section#cta h2 {
-    color: #999;
+    color: #fff;
     font-size: 50px;
     text-transform: uppercase;
 }
@@ -328,6 +375,17 @@ section#cta .signup-cta {
     position: absolute;
     bottom: 100px;
     -webkit-transform: skew(-13deg, 0);
+}
+
+section#cta #cta-block {
+    margin-top: 115px;
+}
+
+section#cta #cta-block p {
+    font-size: 24px;
+    line-height: 36px;
+    width: 70%;
+    margin: 0 auto 50px auto;
 }
 
 /* About */
@@ -565,7 +623,7 @@ footer .copyright a {
 section#about-header {
     height: 500px;
     width: 100%;
-    background-image: url('band.jpg');
+    background-image: url('../img/band.jpg');
     background-size: cover;
     background-attachment: fixed;
     float: left;
@@ -663,6 +721,7 @@ section#profile h1 img {
 section#profile .video {
     width: 610px;
     height: 457.5px;
+    background-color: #ccc;
 }
 
 section#profile .actions {
@@ -990,22 +1049,8 @@ section#profile-editor {
     margin: 60px;
 }
 
-.regular-signup {
-    display: none;
-}
+/* Terms */
 
-.regular-sign-in {
-    display: none;
-}
-
-
-.reward input {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    font-size: 14px;
-    font-weight: 300;
+section#terms-of-service {
+    margin-top: 60px;
 }
