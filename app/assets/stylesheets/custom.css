@@ -315,7 +315,7 @@ section#cta {
     height: 500px;
     position: relative;
     width: 100vw;
-    background-image: url('../img/carter.jpg');
+    background-image: url('../images/carter.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden !important;
