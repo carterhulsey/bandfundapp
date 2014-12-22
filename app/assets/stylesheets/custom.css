@@ -515,6 +515,7 @@ section#discover .item .center {
 
 section#discover .card {
     width: 274px;
+    height: 405px;
     float: left;
     list-style: none;
     background-color: #fff;
