@@ -244,7 +244,7 @@ header {
     z-index: 10;
 }
 
-header .logo svg {
+header img.logo {
     margin-top: 20px;
     float: left;
 }
