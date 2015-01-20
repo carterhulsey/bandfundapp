@@ -45,12 +45,12 @@
                 = artist.website_url
         .actions
           %a.button.button-green.pledge-button{:href => artist_rewards_path(params[:id])} Pledge
-          %a#message.button.button-lightgreen{:href => "#"}
-            %span Send Message
-            = image_tag "icons/message.svg"
-          %a#follow.button.button-lightgreen{:href => "#"}
-            %span Follow
-            = image_tag "icons/follow.svg"
+          / %a#message.button.button-lightgreen{:href => "#"}
+          /   %span Send Message
+          /   = image_tag "icons/message.svg"
+          / %a#follow.button.button-lightgreen{:href => "#"}
+          /   %span Follow
+          /   = image_tag "icons/follow.svg"
       / small-4
     / /row
     #profile-content.row
