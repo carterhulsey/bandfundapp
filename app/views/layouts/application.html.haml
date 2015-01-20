@@ -38,7 +38,6 @@
             = link_to "Sign out", destroy_fan_session_path, method: :delete
           - else
             %a{:href => new_artist_session_path} Login
-            %a.fan-login{:href => new_fan_session_path} Login
     = yield
     %footer
       .links
