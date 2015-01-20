@@ -766,6 +766,7 @@ section#profile .actions a.button-lightgreen img {
 section#profile .stats {
     float: left;
     margin-top: -20px;
+    width: 100%;
 }
 
 section#profile .stat {
