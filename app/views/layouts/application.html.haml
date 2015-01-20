@@ -31,13 +31,17 @@
         %a{:href => "#"} Get Started
         %a{:href => "index.html#discover"} Discover
         %a{:href => '/about.html'} About
-        #login
-          - if current_artist
+        - if current_artist
+          .login
             = link_to 'Account', artists_path
-          - elsif current_fan
+        - elsif current_fan
+          .login
             = link_to "Sign out", destroy_fan_session_path, method: :delete
-          - else
-            %a{:href => new_artist_session_path} Login
+        - else
+          .login
+            %a{:href => new_artist_session_path} Artist Login
+          .login
+            %a{:class => "fan-login" :href => new_fan_session_path} Fan Login
     = yield
     %footer
       .links

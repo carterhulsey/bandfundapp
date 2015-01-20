@@ -284,11 +284,11 @@ header nav a:hover {
     border-bottom: 1px solid #999;
 }
 
-header nav #login {
+header nav .login {
     float: right;
 }
 
-header nav #login > a {
+header nav .login > a {
     color: #fff;
     margin: 0;
     padding: 18px 40px;
@@ -298,12 +298,33 @@ header nav #login > a {
    -webkit-transition: background-color .1s ease-in-out;
 }
 
-header nav #login > a:hover {
+header nav .login > a.fan-login {
+    color: #fff;
+    margin: 0;
+    padding: 18px 40px;
+    background-color: #947B9B;
+    transition: background-color .1s ease-in-out;
+   -moz-transition: background-color .1s ease-in-out;
+   -webkit-transition: background-color .1s ease-in-out;
+}
+
+header nav .login > a:hover {
     color: #fff;
     margin: 0;
     padding: 18px 40px;
     border: none;
     background-color: #63CE9B;
+    transition: background-color .1s ease-in-out;
+   -moz-transition: background-color .1s ease-in-out;
+   -webkit-transition: background-color .1s ease-in-out;
+}
+
+header nav .login > a.fan-login:hover {
+    color: #fff;
+    margin: 0;
+    padding: 18px 40px;
+    border: none;
+    background-color: #AF88BA;
     transition: background-color .1s ease-in-out;
    -moz-transition: background-color .1s ease-in-out;
    -webkit-transition: background-color .1s ease-in-out;
