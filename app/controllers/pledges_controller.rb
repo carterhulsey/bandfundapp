@@ -44,7 +44,7 @@ class PledgesController < ApplicationController
           :email => current_fan.email,
           :card => customer_token.id,
           :plan => params[:reward_id],
-          :application_fee_percent => 20 #Percent we take for letting connected accounts use the service
+          :application_fee_percent => 5 #Percent we take for letting connected accounts use the service
           }, @artist.access_token
         )
 
