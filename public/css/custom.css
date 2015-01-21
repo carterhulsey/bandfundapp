@@ -415,6 +415,41 @@ section#about p {
     margin: 40px 0;
 }
 
+section#company,
+section#values,
+section#meet-the-team,
+section#contact {
+    padding: 100px 0;
+}
+
+section#values {
+    background-color: #42AA7D;
+    color: #fff;
+}
+
+section#meet-the-team {
+    text-align: center;
+}
+
+section#meet-the-team img {
+    width: 70%;
+    margin: 30px auto 0 auto;
+    border-radius: 100%;
+}
+
+section#meet-the-team h3 {
+    margin-bottom: 0;
+}
+
+section#meet-the-team h6 {
+    margin-top: 0;
+}
+
+section#contact {
+    text-align: center;
+    background-color: #eee;
+}
+
 /* Featured */
 
 section#featured {
