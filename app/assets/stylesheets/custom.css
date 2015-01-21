@@ -675,13 +675,9 @@ section#about-header a.button {
 .menu-bar ul li a {
     color: #999;
     text-transform: uppercase;
-    height: 100%;
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid transparent;
 }
 
-.menu-bar ul li a:hover {
+.menu-bar ul li a.active {
     border-bottom: 1px solid #999;
 }
 
