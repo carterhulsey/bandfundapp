@@ -1,12 +1,12 @@
 /* General */
 
-html {
+/*html {
     min-width: 960px;
-}
+}*/
 
 body {
     font-family: 'Brandon Grotesque';
-    min-width: 960px;
+/*    min-width: 960px;*/
     padding-top: 40px;
     color: #333;
 }
@@ -234,7 +234,7 @@ td a img {
 
 header {
     width: 100%;
-    min-width: 960px;
+/*    min-width: 960px;*/
     background-color: #fff;
     border-bottom: #ddd solid 1px;
     height: 60px;
