@@ -59,7 +59,7 @@ label {
 }
 
 .margin-top-large {
-    margin-top: 85px;
+    margin-top: 95px;
 }
 
 .pad-top {
@@ -427,7 +427,7 @@ section#about p {
     color: #333;
     font-size: 18px;
     line-height: 27px;
-    width: 40%;
+    width: 90%;
     margin: 40px 0;
 }
 
