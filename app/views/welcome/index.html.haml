@@ -6,11 +6,13 @@
       %a.button.button-green.button-cta.button-cta-green{:href => new_artist_registration_path} Sign Up as an artist
       %a.button.button-purple.button-cta.button-cta-purple{:href => new_fan_registration_path} Sign Up as a fan
 %section#about
-  .container
-    .about-info
+  .row
+    .small-12.medium-6.columns
       %h3 What is Bandfund?
       %p Bandfund is a recurring crowdfunding platform for musicians and their fans.
       %a.button.button-clear-green{:href => "about"} Learn More
+    .show-for-medium-up
+      %img{:alt => "Bandfund Screenshot", :src => image_path("screenshot.png")}/
 - if @featured_artist
   %section#featured
     .container
