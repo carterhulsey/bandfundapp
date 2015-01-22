@@ -45,15 +45,15 @@
           %h3 Bandfund
           %ul
             %li
-              %a{:href => "signup.html"} Fan Sign Up/Login
+              %a{:href => new_fan_session_path} Fan Sign Up/Login
             %li
-              %a{:href => "signup.html"} Artist Sign Up/Login
+              %a{:href => new_artist_session_path} Artist Sign Up/Login
             / %li
             /   %a{:href => "#"} Tour
             / %li
             /   %a{:href => "#"} Rates
             %li
-              %a{:href => "#"} FAQ
+              %a{:href => "http://bandfund.com/faq"} FAQ
         .list
           %h3 About
           %ul
@@ -62,7 +62,7 @@
             %li
               %a{:href => "http://bandfund.com/about#meet-the-team"} Meet the Team
             %li
-              %a{:href => "#"} Branding
+              %a{:href => "http://bandfund.com/style-guide"} Branding
             / %li
             /   %a{:href => "#"} News
             / %li
@@ -75,7 +75,7 @@
             / %li
             /   %a{:href => "#"} Help Center
             %li
-              %a{:href => "#"} Privacy &amp; Terms
+              %a{:href => "http://bandfund.com/terms"} Privacy &amp; Terms
             / %li
             /   %a{:href => "#"} Copyright
             %li
@@ -92,7 +92,7 @@
       .copyright
         %p
           © 2014 Bandfund |
-          %a{:href => "#"} Privacy Policy
+          %a{:href => "http://bandfund.com/terms#privacy"} Privacy Policy
     = javascript_include_tag "application"
     = yield(:page_javascript)
     :javascript
