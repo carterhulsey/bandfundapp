@@ -58,6 +58,10 @@ label {
     display: block;
 }
 
+.margin-top-large {
+    margin-top: 85px;
+}
+
 .pad-top {
     margin-top: 60px;
 }
@@ -395,7 +399,7 @@ section#about {
     float: left;
     width: 100%;
     padding: 0 30px;
-    height: 500px;
+    height: 440px;
 }
 
 section#about > .row{
