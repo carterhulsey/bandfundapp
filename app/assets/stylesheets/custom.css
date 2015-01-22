@@ -411,7 +411,6 @@ section#about img {
     position: absolute;
     left: 50%;
     bottom: 0;
-    overflow-x: hidden;
 }
 
 section#about .about-info {
