@@ -395,6 +395,18 @@ section#about {
     float: left;
     width: 100%;
     padding: 0 30px;
+    height: 500px;
+}
+
+section#about > .row{
+    position: relative;
+    height: 100%;
+}
+
+section#about img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
 }
 
 section#about .about-info {
