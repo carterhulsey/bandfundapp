@@ -12,6 +12,8 @@ _Bandfund helps musicians connect with their fans more easily and provides a pla
 6. `$ git remote add staging git@heroku.com:bandfundapp-staging.git`
 7. `$ git remote add production git@heroku.com:bandfundapp.git`
 
+You may have to generate SSH keys for Heroku. A guide for this can be found [here](https://devcenter.heroku.com/articles/keys).
+
 ### Third Party
 
 1. Facebook: _create a facebook app, put those keys in the .env file_
@@ -76,9 +78,9 @@ _Bandfund helps musicians connect with their fans more easily and provides a pla
 _In order to keep the site working smoothly, please follow this protocol when pushing changes:_
 
 
-1. Pull most recent version of production `$ git pull production master`
+1. Pull most recent version of repo from Github `$ git pull`
 2. Make your changes
-3. Add your changes to the repo `$ git add .`
+3. Add your changes `$ git add .`
 4. Commit your changes `$ git commit`
 5. Push to staging app `$ git push staging master`
 6. Test changes on <http://bandfundapp-staging.heroku.com>
