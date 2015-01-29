@@ -2,18 +2,17 @@
   - case params[:view]
   - when 'dashboard_fans'
     $('.dashboard').html('#{j render "fans"}');
-    $('.active').removeClass('active')
-    $('.fans').toggleClass("active")
+    $('.active').removeClass('active');
+    $('.fans').toggleClass('active');
   - when 'dashboard_rewards'
     $('.dashboard').html('#{j render "rewards"}');
-    $('.active').removeClass('active')
-    $('.rewards').toggleClass("active")
+    $('.active').removeClass('active');
+    $('.rewards').toggleClass('active');
   - when 'dashboard_payments'
     $('.dashboard').html('#{j render "payments"}');
-    $('.active').removeClass('active')
-    $('.payments').toggleClass('active')
+    $('.active').removeClass('active');
+    $('.payments').toggleClass('active');
   - when 'dashboard_profile'
     $('.dashboard').html('#{j render "profile"}');
-    $('.editor').tinymce(); 
-    $('.active').removeClass('active')
-    $('.profile').toggleClass('active')
+    $('.active').removeClass('active');
+    $('.profile').toggleClass('active');
