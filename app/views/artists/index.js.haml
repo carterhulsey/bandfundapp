@@ -13,6 +13,7 @@
     $('.active').removeClass('active')
     $('.payments').toggleClass('active')
   - when 'dashboard_profile'
-    $('.dashboard').html('#{j render "profile"}');  
+    $('.dashboard').html('#{j render "profile"}');
+    $('.editor').tinymce(); 
     $('.active').removeClass('active')
     $('.profile').toggleClass('active')
