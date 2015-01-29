@@ -8,9 +8,9 @@
     = stylesheet_link_tag "application"
     %script{:src => "https://js.stripe.com/v2/", :type => "text/javascript"}
 
-    %script{:src => "//use.typekit.net/ufl1eak.js"}
-    :javascript
-      try{Typekit.load();}catch(e){}
+    :plain
+      <script src="//use.typekit.net/ufl1eak.js"></script>
+      <script>try{Typekit.load();}catch(e){}</script>
 
   %body
     %header
