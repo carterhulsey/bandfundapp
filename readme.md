@@ -67,10 +67,10 @@ You may have to generate SSH keys for Heroku. A guide for this can be found [her
 #### Deleting Users
 
 First, access the Heroku console: `$ heroku run console -a bandfundapp`
-Remove all artists: `#> Artist.destroy_all`
-Remove all fans: `#> Fan.destroy_all`
-Remove specific artist: `Artist.find(<id of artist>).destroy`
-Remove specific fan: `Fan.find(<id of artist>).destroy`
+- Remove all artists: `#> Artist.destroy_all`
+- Remove all fans: `#> Fan.destroy_all`
+- Remove specific artist: `Artist.find(<id of artist>).destroy`
+- Remove specific fan: `Fan.find(<id of artist>).destroy`
 
 
 
