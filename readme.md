@@ -100,7 +100,11 @@ _In order to keep the site working smoothly, please follow this protocol when pu
 ## Team
 
 #### Internal
-Scott Fahrig <scott@bandfund.com>
+- Scott Fahrig
+    - [@scottfahrig](http://twitter.com/scottfahrig)
+    - <scott@bandfund.com>
 
 #### External
-Corey Grusden <cgrusden@divergentsoftware.com>
+- Corey Grusden
+    - [@cgrusden](http://twitter.com/cgrusden)
+    - <corey@sofetch.io>
