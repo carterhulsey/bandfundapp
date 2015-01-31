@@ -4,6 +4,14 @@
       %h2 Thanks for signing up!
       %p Bandfund is still in its early beta testing phase, but we're super happy you're here! Why not check out Carter Hulsey's profile?
       %a.button.button-purple.button-cta.button-cta-purple{:href => "http://www.bandfund.com/artists/4"} Let's Go!
+%section#about
+  .row
+    .small-12.medium-6.columns.margin-top-large
+      %h3 What is Bandfund?
+      %p Bandfund is a recurring crowdfunding platform for musicians and their fans.
+      %a.button.button-clear-green{:href => "about"} Learn More
+    .show-for-medium-up
+      %img{:alt => "Bandfund Screenshot", :src => image_path("screenshot.png")}/
 %section#featured
   .container
     - if @featured_artist
