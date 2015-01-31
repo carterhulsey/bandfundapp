@@ -6,7 +6,7 @@ class Fans::Devise::SessionsController < Devise::SessionsController
       format.js
     end
   end
-
+  # Goes to fan dashboard
   # def after_sign_in_path_for(resource)
   #   fan_path(current_fan)
   # end
