@@ -4,8 +4,12 @@
     min-width: 960px;
 }*/
 
+* {
+    font-family: 'Brandon Grotesque', 'Helvetica Neue', 'Arial', sans-serif !important;
+}
+
 body {
-    font-family: 'Brandon Grotesque';
+    font-family: 'Brandon Grotesque', 'Helvetica Neue', 'Arial', sans-serif !important;
 /*    min-width: 960px;*/
     padding-top: 40px;
     color: #333;
