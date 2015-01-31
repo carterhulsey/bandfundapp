@@ -57,7 +57,7 @@
       .small-8.columns
         %h2== About #{artist.name}
         .hr-with-margin
-        = social_share_button_tag(artist.name, :url => "http://bandfundapp.herokuapp.com/artists/#{artist.id}", :image => artist.image.url)
+        / = social_share_button_tag(artist.name, :url => "http://bandfundapp.herokuapp.com/artists/#{artist.id}", :image => artist.image.url)
         = artist.about_me.html_safe unless artist.about_me == nil
       .small-4.columns
         %h2 Rewards
