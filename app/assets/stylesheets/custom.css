@@ -50,6 +50,10 @@ input#photo-dropzone {
     background-color: #ddd;
 }
 
+.centered {
+    text-align: center;
+}
+
 .vertical-divider {
     height: 100%;
     width: 1px;

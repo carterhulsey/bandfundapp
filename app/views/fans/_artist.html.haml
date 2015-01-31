@@ -5,5 +5,5 @@
     %h3= artist.name
     %h4= artist.genre
     %p
-      = truncate(strip_tags(@featured_artist.about_me.html_safe), length: 75) { link_to '[read more]', artist }
-    %a.button.button-green{:href => artist_path(artist.id)} Pledge
+      = truncate(strip_tags(@featured_artist.about_me.html_safe), length: 75, :separator => ' ') { link_to '[read more]', artist }
+    %a.button.button-green.centered{:href => artist_path(artist.id)} Pledge
