@@ -1026,6 +1026,11 @@ section#login-fb .button img {
     line-height: 1.5;
 }
 
+.well label {
+    display: inline;
+    float: left;
+}
+
 /* Dashboard */
 
 #subnav {
