@@ -214,6 +214,11 @@ submit.button.button-green {
     box-shadow: 0px 3px 0px 0px #443449;
 }
 
+.link-white {
+    color: #fff;
+    text-decoration: underline;
+}
+
 /* Tables for some reason */
 
 table {
