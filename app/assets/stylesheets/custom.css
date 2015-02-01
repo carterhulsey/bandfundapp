@@ -991,12 +991,19 @@ section#checkout-form #billing-info {
 
 /* Signup */
 
+section#signup-fb,
+section#login-fb {
+    background-image: url('../img/carter.jpg');
+    background-position: center;
+}
+
 section#signup-fb .well,
 section#login-fb .well {
     padding: 80px 20px 100px 20px;
     border: 1px solid #ddd;
     margin: 60px;
     text-align: center;
+    background-color: #fff;
 }
 
 section#signup-fb .button img,
