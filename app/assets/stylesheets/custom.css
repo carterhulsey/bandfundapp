@@ -1001,7 +1001,7 @@ section#signup-fb .well,
 section#login-fb .well {
     padding: 80px 20px 100px 20px;
     border: 1px solid #ddd;
-    margin: 60px;
+    margin: 120px 0;
     text-align: center;
     background-color: #fff;
 }
@@ -1011,6 +1011,11 @@ section#login-fb .button img {
     width: 30px;
     margin-top: -4px;
     margin-right: 5px;
+}
+
+.signup-info {
+    margin: 120px 0;
+    color: #fff;
 }
 
 /* Dashboard */
