@@ -999,7 +999,6 @@ section#login-fb {
 
 section#signup-fb .well,
 section#login-fb .well {
-    padding: 80px 20px 100px 20px;
     border: 1px solid #ddd;
     margin: 120px 0;
     text-align: center;
