@@ -1018,6 +1018,15 @@ section#login-fb .button img {
     color: #fff;
 }
 
+.signup-info h2 {
+    font-size: 40px;
+}
+
+.signup-info p {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
 /* Dashboard */
 
 #subnav {
