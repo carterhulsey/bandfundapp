@@ -44,9 +44,9 @@
           %h3 Bandfund
           %ul
             %li
-              %a{:href => new_fan_session_path} Fan Sign Up/Login
+              %a{:href => new_fan_session_path} Login
             %li
-              %a{:href => new_artist_session_path} Artist Sign Up/Login
+              %a{:href => new_fan_registration_path} Sign Up
             / %li
             /   %a{:href => "#"} Tour
             / %li
@@ -79,6 +79,15 @@
             /   %a{:href => "#"} Copyright
             %li
               %a{:href => "http://bandfund.com/about#contact"} Contact Us
+        .list
+          %h3 Artists
+          %ul
+            %li
+              %a{:href => new_artist_session_path} Login
+            / %li
+            /   %a{:href => new_artist_registration_path} Sign Up
+            / %li
+            /   %a{:href => "#"} Resources
         .list
           %h3 Community
           %ul
