@@ -16,4 +16,5 @@
  *= require bootstrap-modal
  *= require custom
  *= require social-share-button
+ *= require jquery.fs.naver.min
  */

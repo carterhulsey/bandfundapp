@@ -6,7 +6,6 @@
     = csrf_meta_tag
     %title Bandfund
     = stylesheet_link_tag "application"
-    = stylesheet_link_tag "jquery.fs.naver.min"
     %script{:src => "https://js.stripe.com/v2/", :type => "text/javascript"}
 
     %script{:src => "//use.typekit.net/ufl1eak.js", :type=>"text/javascript"}
@@ -103,7 +102,6 @@
           © 2014 Bandfund |
           %a{:href => "http://bandfund.com/terms#privacy"} Privacy Policy
     = javascript_include_tag "application"
-    = javascript_include_tag "jquery.fs.naver.min"
     = yield(:page_javascript)
     :javascript
       $(document).foundation();
