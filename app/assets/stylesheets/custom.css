@@ -324,7 +324,7 @@ header nav #login > a:hover {
 /* CTA */
 
 section#cta {
-    height: 500px;
+    padding: 130px 0;
     position: relative;
     width: 100vw;
     background-image: url('../img/carter.jpg');
@@ -340,6 +340,7 @@ section#cta h2 {
     color: #fff;
     font-size: 50px;
     text-transform: uppercase;
+    line-height: 1.5;
 }
 
 section#cta #fan {
@@ -387,10 +388,6 @@ section#cta .signup-cta {
     position: absolute;
     bottom: 100px;
     -webkit-transform: skew(-13deg, 0);
-}
-
-section#cta #cta-block {
-    margin-top: 115px;
 }
 
 section#cta #cta-block p {
