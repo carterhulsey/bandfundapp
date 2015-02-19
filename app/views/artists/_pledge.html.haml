@@ -1,14 +1,11 @@
 %tr
   %td= pledge.first_name + " " + pledge.last_name
   %td= pledge.email
-  -if pledge.address2 != "" 
-    %td= pledge.address1 + ", " + pledge.address2
-  -else 
-    %td= pledge.address1 + ", " + pledge.city + ", " + pledge.state + " " + pledge.zip
+  %td= pledge.address
   %td= pledge.created_at.strftime("%b %Y")
   %td= number_to_currency(pledge.price).gsub(/\.00$/, "") + "/m"
   %td
-    %a{:href => ""}
+    %a{:href => "mailto:#{pledge.email}" }
       %img{:alt => "", :src => image_path("icons/message-grey.svg")}/
     %a{:href => ""}
       %img{:alt => "", :src => image_path("icons/box.svg")}/
