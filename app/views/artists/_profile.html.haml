@@ -8,7 +8,7 @@
         = form_for(current_artist, url: artist_registration_path, html: {multipart: true, method: :put}) do |form|
           .row
             .small-4.columns
-              %input#photo-dropzone{:name => "artist[image]", :type => "file"}/
+              %input#photo-dropzone{:name => "artist[image]", :type => "file", style: current_artist.image.url ? "background-image:url(#{current_artist.image.url}); background-size: 100%;" : "" }/
             .small-8.columns
               .row
                 .small-12.columns
