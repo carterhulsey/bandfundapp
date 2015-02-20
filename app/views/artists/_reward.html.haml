@@ -21,5 +21,5 @@
     %h5 Supporters
     - @supporters = Pledge.where(:reward_id => reward.id)
     %h5= @supporters.count
-    %p=  reward.description
-    %a.button.button-green{:href => new_reward_pledge_url(@reward, protocol: "https")} Pledge  
+    %p= reward.description
+    %a.button.button-green{:href => new_reward_pledge_url(reward, protocol: "https")} Pledge

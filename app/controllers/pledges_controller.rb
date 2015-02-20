@@ -5,7 +5,6 @@ class PledgesController < ApplicationController
     @pledge = Pledge.new
     @reward = Reward.find(params[:reward_id])
     @artist = Artist.find(@reward.artist.id)
-    @rewards = Reward.where(:artist_id => @artist.id)
 
     if !current_fan
       render "sign_up"

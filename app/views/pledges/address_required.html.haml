@@ -1,6 +1,6 @@
 .container
   %section#checkout-form
-    = form_tag("/rewards/#{@reward.id}/pledges",method: 'POST', id: "payment-form") do 
+    = form_tag("/rewards/#{@reward.id}/pledges",method: 'POST', id: "payment-form") do
       .row
         #checkout-form.small-8.columns
           .row
@@ -81,13 +81,13 @@
                   %input{"data-stripe" => "cvc", :size => "4", :type => "text"}/
                 .small-6.columns
                   %label{:for => "Billing ZIP"} Billing ZIP
-                  %input{:name => "Billing ZIP", :placeholder => "64804", :type => "text"}/                
+                  %input{:name => "Billing ZIP", :placeholder => "64804", :type => "text"}/
         / Form Side
         #checkout-info.small-4.columns
           / Info Side
           %img#cards-image{:alt => "", :src => image_path("cards.svg")}/
           .hr-with-margin
-            = render partial:'/artists/reward', pledge: true, collection: @artist.rewards, locals: {pledge: false, edit: false, new_pledge: true}
+            = render partial:'/artists/reward', pledge: true, locals: {reward: @reward, pledge: false, edit: false, new_pledge: true}
         / row
         .row.pad-top
           .small-12.columns
