@@ -8,7 +8,7 @@
         = form_for(current_artist, url: artist_registration_path, html: {multipart: true, method: :put}) do |form|
           .row
             .small-4.columns
-              %input#photo-dropzone{:name => "artist[image]", :type => "file"}/
+              %input#photo-dropzone{:name => "artist[image]", :type => "file", style: current_artist.image.url ? "background-image:url(#{current_artist.image.url}); background-size: 100%;" : "" }/
             .small-8.columns
               .row
                 .small-12.columns
@@ -34,41 +34,20 @@
                   = form.text_field :state
           .row
             .small-12.columns.pad-top
-              = form.label :about_me, "Content"
-              = form.text_area :about_me, class: "editor"
+              = form.cktext_area :about_me, class: "editor"
           .row
             .small-4.columns.pad-top
               = submit_tag "Submit", class: "button button-green"
-:javascript
-  tinyMCE.init({
-    selector: 'textarea.editor'
-  });
 
+:javascript
   function readURL(input) {
     if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $('#photo-dropzone input').hide();
-
-            $('#target').show();
-
-        }
-
-        reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-              = form.cktext_area :about_me, class: "editor"
-          = submit_tag "Submit", class: "button button-green"
-- content_for(:page_javascript) do
-  :javascript
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-          var reader = new FileReader();
-          reader.onload = function (e) {
-              $('#photo-dropzone input').hide();
-              $('#target').show();
-          }
-          reader.readAsDataURL(input.files[0]);
-          }
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $('#photo-dropzone input').hide();
+        $('#target').show();
       }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+

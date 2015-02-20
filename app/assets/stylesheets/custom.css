@@ -26,7 +26,9 @@ input#photo-dropzone {
     height: 228px;
     width: 228px;
     background-color: #efefef;
-    background: #efefef url("../img/icons/upload.svg") no-repeat center center;
+    background-image: url("../img/icons/upload.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: 80px;
     text-indent: -9999px;
     color: transparent;
