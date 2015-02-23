@@ -5,13 +5,7 @@ class Pledge < ActiveRecord::Base
   belongs_to :fan
 
   def address
-    address_parts = [self.address1]
-    address_parts << self.address2 if self.address2 && !self.address2.empty?
-    address_parts << self.city if self.city && !self.city.empty?
-    address_parts << self.state if self.state && !self.state.empty?
-    address_parts << self.zip if self.zip && !self.zip.empty?
-
-    address_parts.join(', ')
+    [self.address1, self.address2, self.city, self.state, self.zip].compact.join(", ")
   end
 
   def full_name
