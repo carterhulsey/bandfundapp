@@ -1,5 +1,5 @@
 class PledgeMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "info@bandfund.com"
   layout 'mail'
 
   def notify_fan(pledge)

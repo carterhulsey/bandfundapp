@@ -56,8 +56,8 @@ class PledgesController < ApplicationController
       end
       if @pledge.save
         ArtistPledge.create(pledge_id: @pledge.id, artist_id: @pledge.artist_id, price: @reward.price)
-        PledgeMailer.notify_fan(@pledge).deliver_later
-        PledgeMailer.notify_artist(@pledge).deliver_later
+        PledgeMailer.notify_fan(@pledge).deliver
+        PledgeMailer.notify_artist(@pledge).deliver
 
         redirect_to artist_path(@pledge.artist_id)
       else
