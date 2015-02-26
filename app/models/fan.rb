@@ -12,7 +12,11 @@ class Fan < ActiveRecord::Base
     end
   end
 
-  def has_pledge_for(artist)
-    self.pledges.where(artist_id: artist).any?
+  def has_pledge_for?(artist)
+    self.pledges.where(artist_id: artist.id).any?
+  end
+
+  def pledge_for(artist)
+    self.pledges.where(artist_id: artist.id).first
   end
 end
