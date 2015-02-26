@@ -1,6 +1,9 @@
 class Pledge < ActiveRecord::Base
   has_many :artist_pledges
   has_many :artists, :through => :artist_pledges
+  belongs_to :fan
+
+  validates :fan_id, uniqueness: {scope: :artist_id, message: 'already has a pledge for this artist'}
 
   def address
     address_parts = [self.address1]

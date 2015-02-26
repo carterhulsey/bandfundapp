@@ -10,6 +10,10 @@ class PledgesController < ApplicationController
       render "sign_up"
     end
 
+    if current_fan.has_pledge_for(@artist)
+      redirect_to @artist, :flash => { :error => 'You already have a pledge for this artist. Please cancel your existing pledge before creating a new one' }
+    end
+
     if @reward.address_required == true
       render "address_required"
     end

@@ -37,6 +37,11 @@
             = link_to "Sign out", destroy_fan_session_path, method: :delete
           - else
             %a{:href => new_fan_session_path} Login
+
+    - flash.each do |name, msg|
+      .container.flash
+        = content_tag :div, msg, class: "#{name} alert"
+
     = yield
     %footer
       .links
