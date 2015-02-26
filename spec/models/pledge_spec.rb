@@ -7,7 +7,9 @@ describe Pledge do
 
   describe '.send_notifications' do
     it 'delivers email notifications after create' do
-      expect{ subject.save }.to change { ActionMailer::Base.deliveries.count }.by(2)
+      expect_any_instance_of(PledgeMailer).to receive(:notify_fan).with(subject)
+      expect_any_instance_of(PledgeMailer).to receive(:notify_artist).with(subject)
+      subject.save
     end
   end
 
