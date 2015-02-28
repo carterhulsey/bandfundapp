@@ -1,8 +1,11 @@
 class PledgeMailer < ActionMailer::Base
+  include Roadie::Rails::Automatic
+
   default from: "info@bandfund.com"
   layout 'mail'
 
   def notify_fan(pledge)
+    @template_label = "Fan notificaiton"
     @pledge = pledge
     @fan = pledge.fan
     @artist = pledge.artist
@@ -10,6 +13,7 @@ class PledgeMailer < ActionMailer::Base
   end
 
   def notify_artist(pledge)
+    @template_label = "Artist notificaiton"
     @pledge = pledge
     @fan = pledge.fan
     @artist = pledge.artist

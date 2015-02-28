@@ -1,2 +1,14 @@
-%p Hi #{@pledge.first_name},
-%p You have successfully pledged $#{@pledge.price}/month to support #{@artist.name}.
+%table.row
+  %tr
+    %td.wrapper.last
+      %table.twelve.columns
+        %tr
+          %td
+            %h1 Your pledge to  #{@artist.name} was successful!
+            %p.lead You've pledged $#{@pledge.price} to #{@artist.name} on Bandfund!
+            %p Thank you for continuing to support music and the people who make it!
+            %p
+              If you have any questions or issues, please contact our support team via
+              = succeed "." do
+                %a{:href => "http://twitter.com/bandfundapp"} Twitter
+          %td.expander
