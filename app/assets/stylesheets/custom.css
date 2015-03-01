@@ -379,6 +379,12 @@ header nav #login > a:hover {
     font-size: 14px;
 }
 
+.small-display .main-menu ul .artist-login a{
+    color: #bbb;
+    margin-top: 30px;
+
+}
+
 .small-display .main-menu a{
     float: right;
 }
