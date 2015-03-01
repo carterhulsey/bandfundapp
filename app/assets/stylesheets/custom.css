@@ -349,6 +349,64 @@ header nav #login > a:hover {
    -webkit-transition: background-color .1s ease-in-out;
 }
 
+
+.small-display{
+    display: none;
+}
+
+.small-display .main-menu ul{
+    top: 43px;
+    position: absolute;
+    right: 0;
+    background: #fff;
+    list-style-type: none;
+    padding-bottom: 20px;
+    border: 1px #ddd solid;
+    border-top:none;
+    border-right: none;
+}
+
+.small-display .main-menu ul li{
+    padding: 20px 30px;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1em;
+}
+
+.small-display .main-menu ul .text-heading a{
+    text-transform: uppercase;
+    color: #bbb;
+    font-size: 14px;
+}
+
+.small-display .main-menu a{
+    float: right;
+}
+
+.menu-control{
+    float: right;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.menu-control img{
+    height: 20px;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 40em) {
+    /* #menu is the original menu */
+    .full-display {
+        display:none;
+    }
+
+    .small-display {
+        display:block;
+    }
+}
+
+
 /* CTA */
 
 section#cta {

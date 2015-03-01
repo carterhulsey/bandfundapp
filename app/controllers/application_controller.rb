@@ -3,9 +3,14 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
+  helper_method :featured_artist
 
   def auth_failure
     render '/shared/error.html.haml'
+  end
+
+  def featured_artist
+    Artist.find_by(featured: true)
   end
 
   protected
@@ -17,6 +22,6 @@ class ApplicationController < ActionController::Base
 
 
   def after_update_path_for(resource)
-    gtresource.class 
+    gtresource.class
   end
 end
