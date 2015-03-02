@@ -10,6 +10,10 @@ class PledgesController < ApplicationController
       render "sign_up"
     end
 
+    if current_fan.has_pledge_for?(@artist)
+      redirect_to @artist, :flash => { :error => 'You already have a pledge for this artist. Please cancel your existing pledge before creating a new one' }
+    end
+
     if @reward.address_required == true
       render "address_required"
     end
@@ -70,6 +74,14 @@ class PledgesController < ApplicationController
     rescue Exception => e
       @stripe_errors = "There was an error, we're on it!: #{e.message}"
       render "new"
+    end
+  end
+
+  def destroy
+    @pledge = Pledge.find(params[:id])
+    @artist = Artist.find(@pledge.artist_id)
+    if @pledge.destroy
+      redirect_to @artist
     end
   end
 

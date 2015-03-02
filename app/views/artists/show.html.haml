@@ -44,7 +44,10 @@
                 = image_tag "icons/link.svg"
                 = artist.website_url
         .actions
-          %a.button.button-green.pledge-button{:href => artist_rewards_path(params[:id])} Pledge
+          - if @existing_pledge
+            = link_to "Cancel Pledge", url_for([@existing_pledge.reward, @existing_pledge]), method: :delete, data: {confirm: 'Are you sure you want to cancel your pledge?'}, class: 'button button-purple pledge-button'
+          -else
+            %a.button.button-green.pledge-button{:href => artist_rewards_path(params[:id])} Pledge
           / %a#message.button.button-lightgreen{:href => "#"}
           /   %span Send Message
           /   = image_tag "icons/message.svg"

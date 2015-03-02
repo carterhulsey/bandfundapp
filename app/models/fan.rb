@@ -3,7 +3,7 @@ class Fan < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_and_belongs_to_many :pledges
+  has_many :pledges
 
   after_create :send_welcome_message
 
@@ -16,5 +16,13 @@ class Fan < ActiveRecord::Base
 
   def send_welcome_message
     WelcomeMailer.fan(self).deliver
+  end
+
+  def has_pledge_for?(artist)
+    self.pledges.where(artist_id: artist.id).any?
+  end
+
+  def pledge_for(artist)
+    self.pledges.where(artist_id: artist.id).first
   end
 end

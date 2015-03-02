@@ -1213,3 +1213,23 @@ section#profile-editor {
 section#terms-of-service {
     margin-top: 60px;
 }
+
+/* Flash */
+.flash{
+    margin-top: 60px;
+}
+
+.alert {
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.notice {
+    background-color: #4DB0D6;
+    color: #FFFFFF;
+}
+
+.error {
+    background-color: #D6604D;
+    color: #FFFFFF;
+}

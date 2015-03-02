@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :fans, only: [:show, :index]
 
   resources :rewards, only: :show do
-    resources :pledges, only: [:new, :create, :update]
+    resources :pledges, only: [:new, :create, :update, :destroy]
   end
 
   resources :artists, only: [:show, :index] do

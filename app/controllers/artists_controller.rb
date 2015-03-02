@@ -18,6 +18,11 @@ class ArtistsController < ApplicationController
   def show
     pledges = Pledge.where(artist_id: params[:id])
     @total = 0
+
+    if current_fan && current_fan.has_pledge_for?(artist)
+      @existing_pledge = current_fan.pledge_for(artist)
+    end
+
     pledges.each do |pledge|
       @total += pledge.price
     end
