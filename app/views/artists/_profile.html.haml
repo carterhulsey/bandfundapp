@@ -7,6 +7,10 @@
       .well
         = form_for(current_artist, url: upload_image_artist_path(current_artist), html: {enctype: "multipart/form-data", method: :post, id: 'image-upload-form'}) do |form|
           .small-4.columns
+            %label{for: "photo-dropzone"}
+              .upload-icon-container
+                %img.upload-photo{src: asset_path('icons/upload.svg') }
+
             %input#photo-dropzone{:name => "artist[image]", :type => "file", style: current_artist.image.url ? "background-image:url(#{current_artist.image.url}); background-size: 100%;" : "" }/
             .progress
               #image-upload-progress.progress-bar{role: "progressbar", style: 'width: 0%;', aria: {valuenow: "0", valuemin:"0", valuemax:"100"}}
