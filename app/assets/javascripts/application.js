@@ -23,5 +23,5 @@
 //= require ckeditor/init
 //= require ckeditor/config
 //= require foundation.min
-//= require jquery.fs.naver.min
+//= require vendor/jquery.form.min
 

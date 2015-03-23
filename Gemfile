@@ -22,6 +22,8 @@ gem 'aws-sdk'
 gem 'cocaine'
 gem 'youtube_addy'
 gem 'ckeditor'
+gem 'roadie'
+gem 'roadie-rails'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.3'
@@ -33,7 +35,7 @@ group :production, :staging do
   gem 'rails_12factor'
 end
 
-group :development, :test do 
+group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
   gem 'capybara'
   gem 'selenium-webdriver'

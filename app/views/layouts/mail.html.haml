@@ -1,0 +1,83 @@
+<!doctype html>
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "text/html", :'http-equiv' => "Content-Type"}/
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    = stylesheet_link_tag 'mail'
+
+  %body
+  %table.body
+    %tr
+      %td.center{:align => "center", :valign => "top"}
+        %center
+          %table.row.header
+            %tr
+              %td.center{:align => "center"}
+                %center
+                  %table.container
+                    %tr
+                      %td.wrapper.last
+                        %table.twelve.columns
+                          %tr
+                            %td.three.sub-columns
+                              %a{:href => "http://bandfund.com"}
+                                %img{:src => "http://bandfund.com/img/logo-full-white.png"}/
+                            %td.nine.sub-columns.last{:style => "text-align:right; vertical-align:middle;"}
+                              %span.template-label
+                                =@template_label.upcase
+                            %td.expander
+          %table.container
+            %tr
+              %td
+                = yield
+
+                %table.row.callout
+                  %tr
+                    %td.wrapper.last
+                      %table.twelve.columns
+                        %tr
+                          %td.panel
+                            %p{:style => "margin-bottom: 0;"}
+                              Bandfund is currently open for new artist registration. Are you a musician? Have friends that are?
+                              %a{:href => "http://www.bandfund.com/"} Learn More »
+                          %td.expander
+                %table.row.footer
+                  %tr
+                    %td.wrapper
+                      %table.six.columns
+                        %tr
+                          %td.left-text-pad
+                            %h5 Connect With Us:
+                            %table.tiny-button.facebook
+                              %tr
+                                %td
+                                  %a{:href => "http://facebook.com/bandfund"} Facebook
+                            %br
+                              %table.tiny-button.twitter
+                                %tr
+                                  %td
+                                    %a{:href => "http://twitter.com/bandfundapp"} Twitter
+                          %td.expander
+                    %td.wrapper.last
+                      %table.six.columns
+                        %tr
+                          %td.last.right-text-pad
+                            %h5 Contact Bandfund:
+                            %p
+                              Email:
+                              %a{:href => "mailto:hseldon@trantor.com"} hello@bandfund.com
+                          %td.expander
+                %table.row
+                  %tr
+                    %td.wrapper.last
+                      %table.twelve.columns
+                        %tr
+                          %td{:align => "center"}
+                            %center
+                              %p{:style => "text-align:center;"}
+                                %a{:href => "http://www.bandfund.com/terms"} Terms
+                                |
+                                %a{:href => "http://www.bandfund.com/terms#privacy"} Privacy
+                          %td.expander
+

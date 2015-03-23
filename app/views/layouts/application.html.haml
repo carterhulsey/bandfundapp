@@ -12,31 +12,11 @@
     %script try{Typekit.load();}catch(e){}
 
   %body
-    %header
-      .logo
-        %a{:href => root_url}
-          / Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In
-          %img.logo{:alt => "", :width => "93.3px", :src => image_path("logo.svg")}/
-      .vertical-divider
-      / #search
-      /   / Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In
-      /   %svg{"enable-background" => "new 0 0 11 11", :height => "11px", :version => "1.1", :viewbox => "0 0 11 11", :width => "11px", :x => "0px", "xml:space" => "preserve", :xmlns => "http://www.w3.org/2000/svg", "xmlns:a" => "http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :y => "0px"}
-      /     %defs
-      /     %g
-      /       %path{:d => "M11,4.1c0,2.3-1.8,4.1-4.1,4.1C6.1,8.2,5.3,8,4.7,7.6l-3.1,3.1C1.4,10.9,1.1,11,0.9,11\n            c-0.2,0-0.5-0.1-0.6-0.3c-0.4-0.4-0.4-0.9,0-1.3l3.1-3.1C3,5.7,2.8,4.9,2.8,4.1C2.8,1.8,4.6,0,6.9,0S11,1.8,11,4.1z M9.6,4.1\n            c0-1.5-1.2-2.8-2.8-2.8S4.1,2.6,4.1,4.1s1.2,2.8,2.8,2.8S9.6,5.6,9.6,4.1z", :fill => "#999999"}/
-      /   %input{:placeholder => "Search Artists", :type => "text"}/
-      %nav
-        %a{:href => root_url} Home
-        / %a{:href => "#"} Get Started
-        %a{:href => "index.html#discover"} Discover
-        %a{:href => 'http://bandfund.com/about'} About
-        #login
-          - if current_artist
-            = link_to 'Account', artists_path
-          - elsif current_fan
-            = link_to "Sign out", destroy_fan_session_path, method: :delete
-          - else
-            %a{:href => new_fan_session_path} Login
+    = render partial: 'shared/navigation'
+    - flash.each do |name, msg|
+      .container.flash
+        = content_tag :div, msg, class: "#{name} alert"
+
     = yield
     %footer
       .links
@@ -105,5 +85,21 @@
     = yield(:page_javascript)
     :javascript
       $(document).foundation();
+
     :javascript
-      $("nav").naver({ maxWidth: "500px", label: false });
+      var menu = $('.main-menu ul');
+      var showMenu = $('.show-menu');
+      var hideMenu = $('.hide-menu');
+      menu.hide();
+      hideMenu.hide();
+      hideMenu.on('click', function(){
+        menu.hide();
+        hideMenu.hide();
+        showMenu.show();
+      })
+
+      showMenu.on('click', function(){
+        menu.show();
+        hideMenu.show();
+        showMenu.hide();
+      })
