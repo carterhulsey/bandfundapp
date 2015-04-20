@@ -2,7 +2,7 @@ class ArtistsController < ApplicationController
 
   helper_method :artist
   respond_to :js
-  
+
   def index
     @reward = Reward.new
     if !current_artist
@@ -18,8 +18,24 @@ class ArtistsController < ApplicationController
   def show
     pledges = Pledge.where(artist_id: params[:id])
     @total = 0
+
+    if current_fan && current_fan.has_pledge_for?(artist)
+      @existing_pledge = current_fan.pledge_for(artist)
+    end
+
     pledges.each do |pledge|
       @total += pledge.price
+    end
+
+    @rewards = artist.rewards.order('price asc')
+  end
+
+  def image
+    @artist = Artist.find(params[:id])
+    if @artist.update_attributes(image: params[:artist][:image])
+      render json: {image: @artist.image.url}
+    else
+      render json: {errors: @artist.errors.full_messages}, status: 422
     end
   end
 

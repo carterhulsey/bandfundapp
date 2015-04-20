@@ -1,0 +1,66 @@
+%header.full-display
+  .logo
+    %a{:href => root_url}
+      / Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In
+      %img.logo{:alt => "", :width => "93.3px", :src => image_path("logo.svg")}/
+  .vertical-divider
+  %nav.full-menu
+    %a{:href => root_url} Home
+    / %a{:href => "#"} Get Started
+    %a{:href => "index.html#discover"} Discover
+    %a{:href => 'http://bandfund.com/about'} About
+    #login
+      - if current_artist
+        = link_to 'Account', artists_path
+      - elsif current_fan
+        = link_to "Sign out", destroy_fan_session_path, method: :delete
+      - else
+        %a{:href => new_fan_session_path} Login
+
+
+%header.small-display
+  .logo
+    %a{:href => root_url}
+      / Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In
+      %img.logo{:alt => "", :width => "93.3px", :src => image_path("logo.svg")}/
+  .vertical-divider
+  .main-menu
+    .menu-control.show-menu
+      %img{src: image_path('icons/show-menu.svg')}
+    .menu-control.hide-menu
+      %img{src: image_path('icons/hide-menu.svg')}
+    %ul
+      %li
+        %a{:href => root_url} Home
+      %li
+        %a{:href => "index.html#discover"} Discover
+      %li
+        %a{:href => 'http://bandfund.com/about'} About
+
+      - if current_artist
+        %li.text-heading
+          = link_to 'Account', '#'
+        %li
+          = link_to "Fans", {view: :dashboard_fans}, remote: true
+        %li
+          = link_to "Rewards", {view: :dashboard_rewards}, remote: true
+        %li
+          = link_to "Payment Info", {view: :dashboard_payments}, remote: true
+        %li
+          = link_to "Profile", {view: :dashboard_profile}, remote: true
+        %li
+          = link_to "Log out", destroy_artist_session_path, method: :delete
+      -else
+        - if current_fan
+          %li
+            = link_to "Log out", destroy_fan_session_path, method: :delete
+        - else
+          %li
+            %a{:href => new_fan_session_path} Login
+        %li.text-heading
+          = link_to 'Featured Artist', '#'
+        %li
+          = link_to featured_artist.name, featured_artist
+        -if !current_fan
+          %li.artist-login
+            %a{:href => new_artist_session_path} Artist Login

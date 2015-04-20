@@ -1,0 +1,18 @@
+%table.row
+  %tr
+    %td.wrapper.last
+      %table.twelve.columns
+        %tr
+          %td
+            %h1 You've recieved a new pledge!
+            %p.lead #{@pledge.full_name} has pledged $#{@pledge.price} to you on Bandfund!
+            %p
+              You can now log in to your
+              %a{:href => "http://bandfund.com/artists/sign_in"} Bandfund
+              to view their info, reward level, and other details.
+            %p We have notified and thanked your new fan for their pledge via email. But, generally it's best practice to personally email your new fans and thank them individually for supporting your music. It sends a strong message that they aren't just giving you money, they're apart of something important. You can do this from the "Fans" section of your artist dashboard.rdio
+            %p
+              If you have any questions or issues, please contact our support team via
+              = succeed "." do
+                %a{:href => "http://twitter.com/bandfundapp"} Twitter
+          %td.expander

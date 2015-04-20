@@ -5,39 +5,51 @@
   .row
     .small-12.columns
       .well
+        = form_for(current_artist, url: upload_image_artist_path(current_artist), html: {enctype: "multipart/form-data", method: :post, id: 'image-upload-form'}) do |form|
+          .small-4.columns
+            %label{for: "photo-dropzone"}
+              .upload-icon-container
+                %img.upload-photo{src: asset_path('icons/upload.svg') }
+
+            %input#photo-dropzone{:name => "artist[image]", :type => "file", style: current_artist.image.url ? "background-image:url(#{current_artist.image.url}); background-size: 100%;" : "" }/
+            .progress
+              #image-upload-progress.progress-bar{role: "progressbar", style: 'width: 0%;', aria: {valuenow: "0", valuemin:"0", valuemax:"100"}}
+                0%
+            %input.button.button-green#upload-image-btn{type: :submit, value: 'Upload'}
+
         = form_for(current_artist, url: artist_registration_path, html: {multipart: true, method: :put}) do |form|
-          .row
-            .small-4.columns
-              %input#photo-dropzone{:name => "artist[image]", :type => "file", style: current_artist.image.url ? "background-image:url(#{current_artist.image.url}); background-size: 100%;" : "" }/
-            .small-8.columns
-              .row
-                .small-12.columns
-                  = form.label :name
-                  = form.text_field :name
-                .small-6.columns
-                  = form.label :website_url, "Website URL"
-                  = form.text_field :website_url
-                .small-6.columns
-                  = form.label :itunes_url, "Itunes URL"
-                  = form.text_field :itunes_url
-                .small-6.columns
-                  = form.label :video_url, "Youtube Video URL (For Profile)"
-                  = form.text_field :video_url
-                .small-6.columns
-                  = form.label :email, "Admin Email"
-                  = form.text_field :email
-                .small-6.columns
-                  = form.label :city, "City"
-                  = form.text_field :city
-                .small-6.columns
-                  = form.label :state, "State"
-                  = form.text_field :state
+          .small-8.columns
+            .row
+              .small-12.columns
+                = form.label :name
+                = form.text_field :name
+              .small-6.columns
+                = form.label :website_url, "Website URL"
+                = form.text_field :website_url
+              .small-6.columns
+                = form.label :itunes_url, "Itunes URL"
+                = form.text_field :itunes_url
+              .small-6.columns
+                = form.label :video_url, "Youtube Video URL (For Profile)"
+                = form.text_field :video_url
+              .small-6.columns
+                = form.label :email, "Admin Email"
+                = form.text_field :email
+              .small-6.columns
+                = form.label :city, "City"
+                = form.text_field :city
+              .small-6.columns
+                = form.label :state, "State"
+                = form.text_field :state
           .row
             .small-12.columns.pad-top
               = form.cktext_area :about_me, class: "editor"
           .row
             .small-4.columns.pad-top
               = submit_tag "Submit", class: "button button-green"
+
+= javascript_include_tag('https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+= javascript_include_tag('http://malsup.github.io/jquery.form.js')
 
 :javascript
   function readURL(input) {
@@ -51,3 +63,30 @@
     }
   }
 
+  var progress = $('.progress');
+  var progressBar = $('#image-upload-progress')
+  var uploadButton = $('#upload-image-btn');
+  progress.hide();
+
+  $('#image-upload-form').ajaxForm({
+    beforeSend: function() {
+      progressBar.attr('aria-valuenow', 0);
+      progress.show();
+      uploadButton.hide();
+    },
+    uploadProgress: function(event, position, total, percentComplete) {
+      if (percentComplete > 95){
+        percentComplete = 95;
+      }
+      progressBar.attr('aria-valuenow', percentComplete);
+      progressBar.css('width', percentComplete + '%');
+      progressBar.html(percentComplete+'%');
+    },
+    complete: function(xhr) {
+      imageUrl = JSON.parse(xhr.responseText).image;
+      $('#photo-dropzone').css('background-image', 'url(' + imageUrl +')')
+      progressBar.attr('aria-valuenow', 0);
+      progress.hide();
+      uploadButton.show();
+    }
+  });
