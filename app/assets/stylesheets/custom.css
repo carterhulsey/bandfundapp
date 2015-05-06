@@ -1,8 +1,8 @@
 /* General */
 
-/*html {
-    min-width: 960px;
-}*/
+html {
+    overflow-x: hidden;
+}
 
 * {
     font-family: 'Brandon Grotesque', 'Helvetica Neue', 'Arial', sans-serif !important;
