@@ -24,7 +24,7 @@ class ArtistsController < ApplicationController
     end
 
     pledges.each do |pledge|
-      @total += pledge.price
+      @total += pledge.price.to_i
     end
 
     @rewards = artist.rewards.order('price asc')
