@@ -7,5 +7,5 @@
           %h6 Supporters
           %h5= reward.title
           %h5= reward.description
-          %h5= reward.price
+          %h5= "$"reward.price
           %a.button.button-green{:href => new_reward_pledge_url(reward.id, protocol: "https")} Pledge
