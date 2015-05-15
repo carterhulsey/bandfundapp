@@ -8,11 +8,23 @@
           %p= reward.description
           %h3== #{number_to_currency(reward.price, precision:0)} Per Month
           %a.button.button-green{:href => new_reward_pledge_url(reward.id, protocol: "https")} Pledge
-      - if reward == @rewards.last
-        .small-12.medium-4.columns.end
-          .reward
-            %h5= reward.title
-            %h5== #{(@artist.pledges.count)} Supporters
-            %p= reward.description
-            %h3== #{number_to_currency(reward.price, precision:0)} Per Month
-            %a.button.button-green{:href => new_reward_pledge_url(reward.id, protocol: "https")} Pledge
+
+
+/ %section#profile
+/   .row  
+/     - @rewards.each_with_index do |reward, index|
+/       .small-12.medium-4.columns
+/         .reward
+/           %h5= reward.title
+/           %h5== #{(@artist.pledges.count)} Supporters
+/           %p= reward.description
+/           %h3== #{number_to_currency(reward.price, precision:0)} Per Month
+/           %a.button.button-green{:href => new_reward_pledge_url(reward.id, protocol: "https")} Pledge
+/       - if index == rewards.size - 1
+/         .small-12.medium-4.columns.end
+/           .reward
+/             %h5= reward.title
+/             %h5== #{(@artist.pledges.count)} Supporters
+/             %p= reward.description
+/             %h3== #{number_to_currency(reward.price, precision:0)} Per Month
+/             %a.button.button-green{:href => new_reward_pledge_url(reward.id, protocol: "https")} Pledge
