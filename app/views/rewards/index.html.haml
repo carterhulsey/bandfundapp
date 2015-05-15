@@ -1,10 +1,10 @@
 %section#profile
   .container
-    .row
-      .small-8.columns   
-        %h5= @artist.pledges.count 
-        %h6 Supporters
-        - @rewards.each do |reward|
+    .row  
+      - @rewards.each do |reward|
+        .small-12.medium-3.columns 
+          %h5= @artist.pledges.count 
+          %h6 Supporters
           %h5= reward.title
           %h5= reward.description
           %h5= reward.price
