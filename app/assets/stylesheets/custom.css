@@ -965,7 +965,7 @@ section#profile #profile-content {
     padding: 20px 20px 50px 20px;
     margin: 20px 0;
     position: relative;
-    border: 1px solid #fff;
+    border: 1px solid #ddd;
     border-radius: 5px 5px 6px 6px;
     transition: all .1s ease-in-out;
    -moz-transition: all .1s ease-in-out;
@@ -973,7 +973,7 @@ section#profile #profile-content {
 }
 
 .reward:hover {
-    border: 1px solid #ddd;
+    background-color: rgba(66,170,125,0.1);
     transition: all .1s ease-in-out;
    -moz-transition: all .1s ease-in-out;
    -webkit-transition: all .1s ease-in-out;
@@ -1007,33 +1007,19 @@ section#profile #profile-content {
     bottom: 0;
     left: 0;
     text-align: center;
-    background-color: #fff;
-    border: 1px solid #fff;
     border-radius: 0 0 5px 5px;
-}
-
-.reward:hover a {
-    display: block;
-    float: left;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-align: center;
     background-color: #42AA7D;
     border: 1px solid #42AA7D;
 }
 
-.reward:hover a:hover {
-    display: block;
-    float: left;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-align: center;
+.reward a:hover {
     background-color: #63CE9B;
     border: 1px solid #63CE9B;
+}
+
+.reward-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 section#secondary-cta {
