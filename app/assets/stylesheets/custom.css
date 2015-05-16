@@ -649,7 +649,7 @@ section#discover .item .center {
 
 section#discover .card {
     width: 274px;
-    height: 405px;
+    height: 412px;
     float: left;
     list-style: none;
     background-color: #fff;
@@ -668,7 +668,7 @@ section#discover .card .thumbnail {
 }
 
 section#discover .card h3 {
-    margin-top: 200px;
+    margin-top: 170px;
     font-size: 30px;
 }
 
