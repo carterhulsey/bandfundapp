@@ -1091,12 +1091,14 @@ section#signup-fb {
     background-image: url('../img/diagonal-bg.png');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 section#login-fb {
     background-image: url('../img/geo-bg.png');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 section#signup-fb .well,
