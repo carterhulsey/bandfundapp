@@ -1087,10 +1087,16 @@ section#checkout-form #billing-info {
 
 /* Signup */
 
-section#signup-fb,
+section#signup-fb {
+    background-image: url('../img/diagonal-bg.png');
+    background-position: center;
+    background-size: cover;
+}
+
 section#login-fb {
     background-image: url('../img/geo-bg.png');
     background-position: center;
+    background-size: cover;
 }
 
 section#signup-fb .well,
