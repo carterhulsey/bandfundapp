@@ -91,6 +91,8 @@
           / Info Side
           %img#cards-image{:alt => "", :src => image_path("cards.svg")}/
           .hr-with-margin
+            :css
+              .reward a.button {display:none;}
             = render partial:'/artists/reward', pledge: true, locals: {reward: @reward, pledge: false, edit: false, new_pledge: true}
         / row
 
