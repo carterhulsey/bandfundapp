@@ -91,7 +91,12 @@
           / Info Side
           %img#cards-image{:alt => "", :src => image_path("cards.svg")}/
           .hr-with-margin
-            = render partial:'/artists/reward', pledge: true, locals: {reward: @reward, pledge: false, edit: false, new_pledge: true}
+            .reward
+              %h3== #{number_to_currency(reward.price, precision:0)} Per Month
+              %h5 Supporters
+              - @supporters = Pledge.where(:reward_id => reward.id)
+              %h5= @supporters.count
+              %p= reward.description
         / row
 
 %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", :type => "text/javascript"}
