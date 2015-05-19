@@ -908,6 +908,11 @@ section#profile .stats {
     margin-top: 0px;
 }
 
+.artist-profile-top {
+    background-color: #fcfcfc;
+    padding: 40px 0;
+}
+
 section#profile .stat {
     display: block;
     float: left;
