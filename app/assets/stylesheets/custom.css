@@ -920,7 +920,7 @@ section#profile .hr {
 
 section#profile .stats h5 {
     font-size: 90px;
-    margin: 0px;
+    margin: -15px 0 0 0;
 }
 
 section#profile .stats h6 {
