@@ -9,7 +9,7 @@
           - if artist.video_url == nil || artist.video_url == ""
             = image_tag(artist.image.url(:profile), size: "610x457.5")
           - else
-            = raw YouTubeAddy.youtube_shortened_url(artist.video_url,610,457.5)
+            = raw YouTubeAddy.youtube_embed_url(artist.video_url,610,457.5)
         / small-8
       .small-12.medium-4.columns
         .stats
