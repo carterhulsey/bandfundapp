@@ -905,8 +905,8 @@ section#profile .stats {
 }
 
 .artist-profile-top {
-    background-color: #fcfcfc;
-    padding: 40px 0;
+    background-color: #efefef;
+    padding: 30px 0 80px 0;
 }
 
 section#profile .stat {
