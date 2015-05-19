@@ -987,6 +987,7 @@ section#profile #profile-content {
 
 .reward:hover {
     background-color: rgba(66,170,125,0.1);
+    border: 1px solid #42aa7d;
     transition: all .1s ease-in-out;
    -moz-transition: all .1s ease-in-out;
    -webkit-transition: all .1s ease-in-out;
