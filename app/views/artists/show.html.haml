@@ -24,35 +24,35 @@
           %h5= number_to_currency(@total, precision: 0)
           %h6 Permo
       / stats
-      .info
-        %ul
-          / %li
-          /   %a{:href => "#"}
-          /     = image_tag "icons/genre.svg"
-          /     Singer/Songwriter (What is this?)
-          %li
-            %a{:href => "#"}
-              - if artist.city == nil
-                = image_tag "icons/location.svg"
-                = "No city listed"
-              -else
-                = image_tag "icons/location.svg"
-                = artist.formatted_location
-          %li
-            %a{:href => artist.website_url}
-              = image_tag "icons/link.svg"
-              = artist.website_url
-      .actions
-        - if @existing_pledge
-          = link_to "Cancel Pledge", url_for([@existing_pledge.reward, @existing_pledge]), method: :delete, data: {confirm: 'Are you sure you want to cancel your pledge?'}, class: 'button button-purple pledge-button'
-        -else
-          %a.button.button-green.pledge-button{:href => artist_rewards_path(params[:id])} Pledge
-        / %a#message.button.button-lightgreen{:href => "#"}
-        /   %span Send Message
-        /   = image_tag "icons/message.svg"
-        / %a#follow.button.button-lightgreen{:href => "#"}
-        /   %span Follow
-        /   = image_tag "icons/follow.svg"
+        .info
+          %ul
+            / %li
+            /   %a{:href => "#"}
+            /     = image_tag "icons/genre.svg"
+            /     Singer/Songwriter (What is this?)
+            %li
+              %a{:href => "#"}
+                - if artist.city == nil
+                  = image_tag "icons/location.svg"
+                  = "No city listed"
+                -else
+                  = image_tag "icons/location.svg"
+                  = artist.formatted_location
+            %li
+              %a{:href => artist.website_url}
+                = image_tag "icons/link.svg"
+                = artist.website_url
+        .actions
+          - if @existing_pledge
+            = link_to "Cancel Pledge", url_for([@existing_pledge.reward, @existing_pledge]), method: :delete, data: {confirm: 'Are you sure you want to cancel your pledge?'}, class: 'button button-purple pledge-button'
+          -else
+            %a.button.button-green.pledge-button{:href => artist_rewards_path(params[:id])} Pledge
+          / %a#message.button.button-lightgreen{:href => "#"}
+          /   %span Send Message
+          /   = image_tag "icons/message.svg"
+          / %a#follow.button.button-lightgreen{:href => "#"}
+          /   %span Follow
+          /   = image_tag "icons/follow.svg"
     / small-4
   / /row
   #profile-content.row

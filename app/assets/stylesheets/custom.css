@@ -919,15 +919,15 @@ section#profile .hr {
 }
 
 section#profile .stats h5 {
-    font-size: 40px;
+    font-size: 90px;
     margin: 0px;
 }
 
 section#profile .stats h6 {
-    float: left;
     font-weight: 300;
     font-size: 20px;
-    margin: -30px 0 25px 5px;
+    margin: -30px 0 25px 0px;
+    width: 100%;
 }
 
 section#profile .info {
