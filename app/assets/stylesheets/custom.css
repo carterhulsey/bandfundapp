@@ -566,11 +566,10 @@ section#featured a.featured-image {
     position: relative;
     height: 100%;
     float: left;
-    margin-right: 30px;
 }
 
 section#featured a.featured-image img.main-image {
-    width: 300px;
+    width: 100%;
     float: left;
 }
 

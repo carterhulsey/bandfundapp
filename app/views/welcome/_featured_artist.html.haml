@@ -1,10 +1,10 @@
 %h2 Featured Artist
 .hr-with-margin
-.small-12.medium-4
+.small-12.medium-4.columns
   %a.featured-image{:href => artist_path(@featured_artist.id)}
     %img.main-image{:alt => "", :src => image_path(@featured_artist.image(:medium))}/
     %img.featured-badge{:alt => "", :src => image_path("featured-badge.svg")}/
-.small-12.medium-8
+.small-12.medium-8.columns
   %h3= @featured_artist.name
   %h4= @featured_artist.genre
   %p
