@@ -60,7 +60,7 @@
               .small-12.columns
                 .payment-errors
                   = @stripe_errors if @stripe_errors
-                = submit_tag "Submit", class: "button button-green", onclick: "this.disabled=true;this.value='Sending, please wait...';this.form.submit();"
+                = submit_tag "Submit", class: "button button-green"
       / Form Side
       #checkout-info.small-12.medium-4.columns
         / Info Side
@@ -70,4 +70,4 @@
             .reward a.button {display:none;}
           = render partial:'/artists/reward', pledge: true, locals: {reward: @reward, pledge: false, edit: false, new_pledge: true}
       / row
-            
+
