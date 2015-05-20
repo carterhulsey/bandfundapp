@@ -19,68 +19,77 @@
 
     = yield
     %footer
-      .links
-        .list
-          %h3 Bandfund
-          %ul
-            %li
-              %a{:href => new_fan_session_path} Login
-            %li
-              %a{:href => new_fan_registration_path} Sign Up
-            / %li
-            /   %a{:href => "#"} Tour
-            / %li
-            /   %a{:href => "#"} Rates
-            %li
-              %a{:href => "http://bandfund.com/faq"} FAQ
-        .list
-          %h3 About
-          %ul
-            / %li
-            /   %a{:href => "#"} Bandfund Blog
-            %li
-              %a{:href => "http://bandfund.com/about#meet-the-team"} Meet the Team
-            %li
-              %a{:href => "http://bandfund.com/style-guide"} Branding
-            / %li
-            /   %a{:href => "#"} News
-            / %li
-            /   %a{:href => "#"} Jobs
-        .list
-          %h3 Support
-          %ul
-            / %li
-            /   %a{:href => "#"} Get Started
-            / %li
-            /   %a{:href => "#"} Help Center
-            %li
-              %a{:href => "http://bandfund.com/terms"} Privacy &amp; Terms
-            / %li
-            /   %a{:href => "#"} Copyright
-            %li
-              %a{:href => "http://bandfund.com/about#contact"} Contact Us
-        .list
-          %h3 Artists
-          %ul
-            %li
-              %a{:href => new_artist_session_path} Login
-            / %li
-            /   %a{:href => new_artist_registration_path} Sign Up
-            / %li
-            /   %a{:href => "#"} Resources
-        .list
-          %h3 Community
-          %ul
-            / %li
-            /   %a{:href => "#"} Referrals
-            %li
-              %a{:href => "http://www.twitter.com/bandfundapp"} Twitter
-            %li
-              %a{:href => "https://www.facebook.com/bandfund"} Facebook
-      .copyright
-        %p
-          © 2014 Bandfund |
-          %a{:href => "http://bandfund.com/terms#privacy"} Privacy Policy
+      .row
+        .small-12.medium-6.columns
+          .links
+            .row
+              .small-6.medium-2.columns
+                .list
+                  %h3 Bandfund
+                  %ul
+                    %li
+                      %a{:href => new_fan_session_path} Login
+                    %li
+                      %a{:href => new_fan_registration_path} Sign Up
+                    / %li
+                    /   %a{:href => "#"} Tour
+                    / %li
+                    /   %a{:href => "#"} Rates
+                    %li
+                      %a{:href => "http://bandfund.com/faq"} FAQ
+              .small-6.medium-2.columns
+                .list
+                  %h3 About
+                  %ul
+                    / %li
+                    /   %a{:href => "#"} Bandfund Blog
+                    %li
+                      %a{:href => "http://bandfund.com/about#meet-the-team"} Meet the Team
+                    %li
+                      %a{:href => "http://bandfund.com/style-guide"} Branding
+                    / %li
+                    /   %a{:href => "#"} News
+                    / %li
+                    /   %a{:href => "#"} Jobs
+              .small-6.medium-2.columns
+                .list
+                  %h3 Support
+                  %ul
+                    / %li
+                    /   %a{:href => "#"} Get Started
+                    / %li
+                    /   %a{:href => "#"} Help Center
+                    %li
+                      %a{:href => "http://bandfund.com/terms"} Privacy &amp; Terms
+                    / %li
+                    /   %a{:href => "#"} Copyright
+                    %li
+                      %a{:href => "http://bandfund.com/about#contact"} Contact Us
+              .small-6.medium-2.columns
+                .list
+                  %h3 Artists
+                  %ul
+                    %li
+                      %a{:href => new_artist_session_path} Login
+                    / %li
+                    /   %a{:href => new_artist_registration_path} Sign Up
+                    / %li
+                    /   %a{:href => "#"} Resources
+              .small-6.medium-2.columns.end
+                .list
+                  %h3 Community
+                  %ul
+                    / %li
+                    /   %a{:href => "#"} Referrals
+                    %li
+                      %a{:href => "http://www.twitter.com/bandfundapp"} Twitter
+                    %li
+                      %a{:href => "https://www.facebook.com/bandfund"} Facebook
+        .small-12.medium-6.columns  
+          .copyright
+            %p
+              © 2014 Bandfund |
+              %a{:href => "http://bandfund.com/terms#privacy"} Privacy Policy
     = javascript_include_tag "application"
     = yield(:page_javascript)
     :javascript
