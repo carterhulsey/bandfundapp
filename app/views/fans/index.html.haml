@@ -14,10 +14,10 @@
     /   %img{:alt => "Bandfund Screenshot", :src => image_path("screenshot.png")}/
 - if @featured_artist
   %section#featured
-    .row
-      = render partial: "welcome/featured_artist"
-  - else
-    please set a featured artist
+  .row
+    = render partial: "welcome/featured_artist"
+- else
+  please set a featured artist
 -# %section#discover
 -#   %h2 Discover
 -#   .container
