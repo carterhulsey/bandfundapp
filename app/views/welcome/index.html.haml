@@ -17,27 +17,3 @@
   %section#featured
     .row
       = render partial: "featured_artist"
-%section#discover
-  %h2 Discover
-  .container
-    #myCarousel.carousel.slide
-      .carousel-inner
-        .item.active
-          %ul.thumbnails
-            = render partial:'fans/artist', collection: @artists1
-        / /Page1
-        .item
-          %ul.thumbnails
-            = render partial:'fans/artist', collection: @artists2
-        / /Page2
-        .item
-          %ul.thumbnails
-            = render partial:'fans/artist', collection: @artists3
-        / /Page3
-      .control-box
-        %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"}
-          %img{:alt => "", :src => image_path("left-controller.png")}/
-        %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"}
-          %img{:alt => "", :src => image_path("right-controller.png")}/
-      / /.control-box
-    / /#myCarousel
