@@ -700,9 +700,7 @@ footer {
 }
 
 footer .links {
-    position: relative;
-    left: 80px;
-    float: left;
+    
 }
 
 footer .list {
@@ -715,9 +713,7 @@ footer .list h3 {
 }
 
 footer .copyright {
-    float: left;
-    position: absolute;
-    right: 80px;
+    margin-top: -16px;
 }
 
 footer ul {
