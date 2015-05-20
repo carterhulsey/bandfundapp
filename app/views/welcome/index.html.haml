@@ -5,12 +5,12 @@
       %p Bandfund empowers artists to keep creating the music you love and earns fans exclusive rewards they deserve.
       / %a.button.button-green.button-cta.button-cta-green{:href => new_artist_registration_path} Sign Up as an artist
       %a.button.button-purple.button-cta.button-cta-purple{:href => new_fan_registration_path} Sign Up as a fan
-%section#about
+%section#about.blue-bg
   .row
     .small-12.medium-6.columns.margin-top-large
       %h3 What is Bandfund?
       %p Bandfund is a recurring crowdfunding platform for musicians and their fans.
-    /   %a.button.button-clear-green{:href => "about"} Learn More
+      %a.button.button-clear-green{:href => "about"} Learn More
     / .show-for-medium-up.medium-6.columns
     /   %img{:alt => "Bandfund Screenshot", :src => image_path("screenshot.png")}/
 - if @featured_artist
