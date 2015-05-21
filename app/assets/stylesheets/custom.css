@@ -850,6 +850,7 @@ section#profile h1 img {
 }
 
 section#profile .video {
+    margin-bottom: 20px;
     background-color: #ccc;
 }
 
