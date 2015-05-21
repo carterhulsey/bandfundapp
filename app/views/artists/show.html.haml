@@ -9,7 +9,9 @@
           - if artist.video_url == nil || artist.video_url == ""
             = image_tag(artist.image.url(:profile), size: "610x457.5")
           - else
-            = raw <iframe width="100%" height="400" src="https://www.youtube.com/embed/#{YouTubeAddy.extract_video_id(artist.video_url)}" frameborder="0" allowfullscreen></iframe>
+            = raw <iframe width="560" height="315" src="https://www.youtube.com/embed/
+            = raw YouTubeAddy.extract_video_id(artist.video_url)
+            = raw " frameborder="0" allowfullscreen></iframe>
         / small-8
       .small-12.medium-4.columns
         .stats
